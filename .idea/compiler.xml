@@ -23,6 +23,7 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="dmitriy" />
+        <module name="examples" />
         <module name="oksana" />
         <module name="pavel" />
         <module name="sergey" />
