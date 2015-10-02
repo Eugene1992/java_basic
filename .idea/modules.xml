@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/dmitriy/dmitriy.iml" filepath="$PROJECT_DIR$/dmitriy/dmitriy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/examples/examples.iml" filepath="$PROJECT_DIR$/examples/examples.iml" />
       <module fileurl="file://$PROJECT_DIR$/java_starter.iml" filepath="$PROJECT_DIR$/java_starter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oksana/oksana.iml" filepath="$PROJECT_DIR$/oksana/oksana.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pavel/pavel.iml" filepath="$PROJECT_DIR$/pavel/pavel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sergey/sergey.iml" filepath="$PROJECT_DIR$/sergey/sergey.iml" />
     </modules>
   </component>
 </project>

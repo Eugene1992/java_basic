@@ -22,7 +22,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="java_starter" />
+        <module name="dmitriy" />
+        <module name="oksana" />
+        <module name="pavel" />
+        <module name="sergey" />
       </profile>
     </annotationProcessing>
   </component>
