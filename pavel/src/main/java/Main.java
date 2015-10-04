@@ -42,13 +42,24 @@ public class Main {
         System.out.println(c);
 
         //Поменять значения двух целочисленных переменных используя третью
-        a = 3;
+        byte k1;
+        byte k2;
+        byte k3;
 
+        k1 = 11;
+        k2 = 65;
 
+        System.out.println(k1);
+        System.out.println(k2);
 
-        System.out.println(a);
-        System.out.println(b);
-        System.out.println(c);
+        k3 = k1;
+        k1 = k2;
+        k2 = k3;
+
+        System.out.println(k1);
+        System.out.println(k2);
+
+        
     }
 
 }
