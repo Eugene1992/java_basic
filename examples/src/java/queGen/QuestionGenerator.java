@@ -19,8 +19,9 @@ public class QuestionGenerator {
             questions.add(s);
         }
         BufferedReader anotherQuestionReader = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("--------------------------------------------------\n--- Welcome to Random Question Generator v2.0! " +
-                "--- \n--------------------------------------------------");
+        System.out.println("--------------------------------------------------\n" +
+                           "--- Welcome to Random Question Generator v2.0! ---" +
+                           "\n--------------------------------------------------");
         QuestionGenerator.makeDelay(2);
         System.out.println("Начать работу? Yes/No?");
         if ((anotherQuestionReader.readLine()).equals("Yes")) {}
