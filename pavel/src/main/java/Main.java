@@ -6,7 +6,7 @@ import java.io.IOException;
  */
 public class Main {
     public static void main(String[] args) {
-        //Создать четыре целочисленные переменные типов byte, short, int, long.
+        //Создать четыре целочисленные переменные типов byte, short, int, long
 
         byte     a;
         short    b;
