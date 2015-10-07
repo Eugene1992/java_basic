@@ -11,8 +11,8 @@ package hw2;
 public class TaskSeven {
     public static void main(String[] args) {
         int a = (byte)44;
-        int b = (byte)300;
-        short c = (byte)(b - a);
+        int b = 300;
+        short c =(short)(b - a);
         System.out.println(c);
     }
 }

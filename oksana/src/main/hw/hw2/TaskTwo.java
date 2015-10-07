@@ -14,7 +14,7 @@ public class TaskTwo {
         int b = 5;
         int c = 4;
         int e = 2;
-        double d = a + b/c/e;
+        double d = (byte)(a + b/c/e);
         System.out.println(d);
     }
 }
