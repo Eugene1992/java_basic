@@ -10,9 +10,9 @@ d приняла знвчение 4.076923076923077
 */
 public class TaskOne {
     public static void main(String[] args) {
-        int a = 53;
-        int b = 13;
-        double d =(float)a/(float)b;
+        int a = 7;
+        int b = 6;
+        double d =(float)a/b;
         System.out.println(d);
     }
 }
