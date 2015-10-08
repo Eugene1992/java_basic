@@ -14,7 +14,7 @@ public class TaskTwo {
         int b = 5;
         int c = 4;
         int e = 2;
-        double d = a + b/c/e;
+        double d = (float) a + ((float)b / c / e); //додано кастінг зміних
         System.out.println(d);
     }
 }
