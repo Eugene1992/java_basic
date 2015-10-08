@@ -11,16 +11,10 @@ package hw1;
 
 public class circle {
     public static void main (String[] args){
-        double r =10;
+        double r =11;
         final double Pi = 3.1415926536;
         r = Pi * r;
         System.out.println (r);
-
-
-
-
-
-
 
     }
 }
