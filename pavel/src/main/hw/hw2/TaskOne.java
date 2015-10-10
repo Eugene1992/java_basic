@@ -9,9 +9,9 @@ d приняла знвчение 4.076923076923077
 комментарий к программе и обьяснить почему до подстановки переменная d принимала иное значение.
 */
 public class TaskOne {
-    public static void main(String[] args) {
-        int a = 7;
-        int b = 6;
+    public static void main(String[] args){
+        int a = 53;
+        int b = 13;
         double d =(float)a/b;
         System.out.println(d);
     }

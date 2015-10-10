@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 public class IfSwitch {
     public static void main(String[] args) throws IOException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in)); //Считать строку с консоли
         String songName = reader.readLine();
 
         switch (songName) {
