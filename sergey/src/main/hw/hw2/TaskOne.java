@@ -12,7 +12,7 @@ public class TaskOne {
     public static void main(String[] args) {
         int a = 53;
         int b = 13;
-        double d = a / b;
+        double d =(double) a/ b;
         System.out.println(d);
     }
 }
