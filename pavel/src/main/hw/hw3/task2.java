@@ -10,12 +10,19 @@ package hw3;
 //                чётным либо нечётным.
 public class task2 {
     public static void main(String args[]) {
-        int n = 10;
-        if(n % 2 == 0) {
+        int n = 11;
+        if(n % 2==0) {
             System.out.println("Число " + n + " четное");
         } else {
             System.out.println("Число " + n + " нечетное");
+
         }
 
     }
 }
+
+
+
+
+
+
