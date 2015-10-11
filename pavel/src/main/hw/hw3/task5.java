@@ -29,8 +29,6 @@ public class task5 {
 
         if (a>b&a<max&a!=max) premax = a;
         else premax =b;
-
-
         if (c >premax&c<max&c!=max)
             premax = c;
         if (d>premax&d<max&d!=max)
