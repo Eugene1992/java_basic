@@ -12,8 +12,8 @@ public class task4 {
         int a = 123;
         int b = 11;
         int c = 22;
-        if (a > b)
-            max = a;
+
+        if (a > b) max = a;
         else max = b;
 
         if (c > max)
