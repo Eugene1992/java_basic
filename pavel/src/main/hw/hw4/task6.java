@@ -22,11 +22,11 @@ public class task6 {
 
         switch(operation)
         {
-            case "2":System.out.println(Integer.toBinaryString(digital));
+            case "2":System.out.println("Число в двоичном коде: "+(Integer.toBinaryString(digital)));
                 break;
-            case "8": System.out.println(Integer.toOctalString(digital));
+            case "8": System.out.println("Число в восьмиричном коде: "+(Integer.toOctalString(digital)));
                 break;
-            case "16": System.out.println(Integer.toHexString(digital));
+            case "16": System.out.println("Число в шестнадцеричном коде: "+(Integer.toHexString(digital)));
                 break;
         }
     }
