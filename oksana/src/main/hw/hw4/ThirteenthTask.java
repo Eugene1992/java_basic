@@ -11,13 +11,25 @@ package hw4;
 public class ThirteenthTask {
     public static void main(String[] args) {
 
-        int Num =0;
-        for (int i=0; i<=23; i++){
-            for(int j=0; j<=59; j++){
-            int x,y,x1,y1;
-            if ( i<10) { x=0; y=i; } else {x=i/10; y=i%10;}
-            if (j<10) {x1=j; y1=0;} else {x1=j/10; y1=j%10;}
-            if ((x==y1)&(y==x1)) ++Num;
+        int Num = 0;
+        for (int i = 0; i <= 23; i++) {
+            for (int j = 0; j <= 59; j++) {
+                int x, y, x1, y1;
+                if (i < 10) {
+                    x = 0;
+                    y = i;
+                } else {
+                    x = i / 10;
+                    y = i % 10;
+                }
+                if (j < 10) {
+                    x1 = j;
+                    y1 = 0;
+                } else {
+                    x1 = j / 10;
+                    y1 = j % 10;
+                }
+                if ((x == y1) & (y == x1)) ++Num;
 
         }
         }
