@@ -8,7 +8,7 @@ import java.io.Console;
 
 
 //Задание 5 Задано четыре переменных, найти вторую по величине.
-public class task5 {
+public class Task5 {
     public static void main(String[] args) {
         int max;
         int premax;
@@ -21,20 +21,18 @@ public class task5 {
         if (a > b) max = a;
         else max = b;
 
-               if (c > max)
-                  max = c;
+        if (c > max)
+            max = c;
 
-                if (d > max)
-                  max = d;
+        if (d > max)
+            max = d;
 
-        if (a>b&a<max&a!=max) premax = a;
-        else premax =b;
-        if (c >premax&c<max&c!=max)
+        if (a > b & a < max & a != max) premax = a;
+        else premax = b;
+        if (c > premax & c < max & c != max)
             premax = c;
-        if (d>premax&d<max&d!=max)
-            premax =d;
-
-
+        if (d > premax & d < max & d != max)
+            premax = d;
 
 
         System.out.println(max);

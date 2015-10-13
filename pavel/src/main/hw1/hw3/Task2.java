@@ -8,7 +8,7 @@ package hw3;
 //        Задание 2
 //        Создать программу, проверяющую и сообщающую на экран, является ли целое число записанное в переменную n,
 //                чётным либо нечётным.
-public class task2 {
+public class Task2 {
     public static void main(String args[]) {
         int n = 11;
         if(n % 2==0) {

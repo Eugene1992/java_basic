@@ -9,7 +9,7 @@ package hw1;
 //        Используя IntelliJ IDEA, создайте класс circle.
 //        Создайте константу с именем PI (число π «пи»), создайте переменную радиус с именем – r. Используя формулу πR2, вычислите площадь круга и выведите результат на экран.
 
-public class circle {
+public class Circle {
     public static void main (String[] args){
         double r =11;
         final double Pi = 3.1415926536;

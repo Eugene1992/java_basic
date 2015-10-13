@@ -10,7 +10,7 @@ package hw1;
 //        Объем V цилиндра радиусом – R и высотой – h, вычисляется по формуле: V = πR2h
 //        Площадь S поверхности цилиндра вычисляется по формуле: S = 2πR2 + 2πR2 = 2πR(R+h)
 //        Результаты расчетов выведите на экран.
-public class volume {
+public class Volume {
     public static void main  (String[] args){
         final double Pi = 3.1415926536;
         double R;

@@ -3,7 +3,7 @@ package hw4;
 /**
  * Created by ppota on 10/11/2015.
  */
-public class task5 {
+public class Task5 {
 
         public static void main(String[] args) {
 

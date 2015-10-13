@@ -8,7 +8,7 @@ import static java.lang.Integer.toUnsignedString;
 /**
  * Created by ppota on 10/12/2015.
  */
-public class task6 {
+public class Task6 {
     public static void main(String[] args) {
         int digital;
 
@@ -20,13 +20,15 @@ public class task6 {
         String operation = sc.next();
         sc.close();
 
-        switch(operation)
-        {
-            case "2":System.out.println("Число в двоичном коде: "+(Integer.toBinaryString(digital)));
+        switch (operation) {
+            case "2":
+                System.out.println("Число в двоичном коде: " + (Integer.toBinaryString(digital)));
                 break;
-            case "8": System.out.println("Число в восьмиричном коде: "+(Integer.toOctalString(digital)));
+            case "8":
+                System.out.println("Число в восьмиричном коде: " + (Integer.toOctalString(digital)));
                 break;
-            case "16": System.out.println("Число в шестнадцеричном коде: "+(Integer.toHexString(digital)));
+            case "16":
+                System.out.println("Число в шестнадцеричном коде: " + (Integer.toHexString(digital)));
                 break;
         }
     }

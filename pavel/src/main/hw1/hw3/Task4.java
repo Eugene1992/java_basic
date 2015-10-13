@@ -5,7 +5,7 @@ package hw3;
  */
 
 //Задано три переменных, найти переменную с максимальным значением (Значение все переменных разные).
-public class task4 {
+public class Task4 {
     public static void main(String[] args) {
 
         int max;

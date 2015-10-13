@@ -17,7 +17,7 @@ import java.util.StringTokenizer;
 //        пользователя.
 
 
-public class task7 {
+public class Task7 {
     public static void main (String[] args){
         int operand1;
         int operand2;
