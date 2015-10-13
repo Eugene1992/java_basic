@@ -14,5 +14,6 @@ public class TaskSix {
         char zero = '0';
         int nine = (short)(Character.getNumericValue(zero) +number);
         System.out.println(nine);
-    }
+
+      }
 }

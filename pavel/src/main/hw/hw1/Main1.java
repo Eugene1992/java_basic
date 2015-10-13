@@ -9,7 +9,7 @@ package hw1;
 //        Проверьте, можно ли создать переменные со следующими именами:
 //        uberflu? , _Identifier ,  \u006fIdentifier , &myVar , myVariab1le
 
-public class main1 {
+public class Main1 {
     public static void main1  (String[] args){
 //        int = uberflu? ;
 //        int =_Identifier;
