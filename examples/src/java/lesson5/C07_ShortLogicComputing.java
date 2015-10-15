@@ -1,5 +1,4 @@
 package lesson5;
-
 /**
  * Created by WebCamp on 06.07.2015.
  */
