@@ -31,7 +31,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
       <module name="dmitriy" target="1.7" />
-      <module name="examples" target="1.5" />
+      <module name="examples" target="1.7" />
       <module name="java_starter" target="1.7" />
       <module name="oksana" target="1.5" />
       <module name="pavel" target="1.5" />
