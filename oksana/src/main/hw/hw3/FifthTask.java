@@ -12,7 +12,7 @@ public class FifthTask {
         int a=4;
         int b=6;
         int c=9;
-        double d = a*a-4*a*c;;
+        double d = a*a-4*a*c;
         double d1 = Math.sqrt(d);
         double x1;
         double x2;
