@@ -24,7 +24,6 @@ public class Task11 {
             a = b;
             b = tmp;
         }
-        System.out.println("Результат " +a);
+        System.out.println("Общий делитель двух натуральных чисел =  " +a);
     }
-
 }
