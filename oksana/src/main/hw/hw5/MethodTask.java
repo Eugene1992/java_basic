@@ -59,11 +59,11 @@ public class MethodTask {
                 case 10:
                     System.out.println(swap(arr1));
                     break;
-                case 11:
+                case 12:
                     System.out.println(compare(arr1, sum1));
                     break;
-                case 12:
-                    System.out.println();
+                case 11:
+                    System.out.println(index(arr1,sum1));
                     break;
                 case 13:
                     System.out.println();
@@ -235,7 +235,20 @@ public class MethodTask {
         }
         return compare;
     }
+    public static String index(int[] arr,double sum1){
+        String index="";
+        for ( int i = 0; i < arr.length; ++i)
+        {
+            if(arr[i] > 0)
+                System.out.println(""+ i);
+            if(arr[i] < 0)
+                sum1 += arr[i];
+        }
+        System.out.println(""+sum1);
+        return index;
+    }
+    }
 
 
-}
+
 
