@@ -33,7 +33,7 @@ public class MethodTask {
                     System.out.println(array(arr1));
                     break;
                 case 2:
-                    System.out.println(Change(arr1));
+                    System.out.println(change(arr1));
                     break;
                 case 3:
                     System.out.println(parts(arr1));
@@ -89,7 +89,7 @@ public class MethodTask {
         return result;
     }
 
-    public static String Change(int[] arr) {
+    public static String change(int[] arr) {
         String change = "";
         System.out.println("Changed array");
         for (int i = 0; i < arr.length; ++i) ;
