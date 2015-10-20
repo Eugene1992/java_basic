@@ -60,7 +60,7 @@ public class MethodTask {
                     System.out.println(swap(arr1));
                     break;
                 case 11:
-                    System.out.println();
+                    System.out.println(compare(arr1, sum1));
                     break;
                 case 12:
                     System.out.println();
@@ -189,24 +189,51 @@ public class MethodTask {
             mn = min(mn, arr[i]);
             mx = max(mx, arr[i]);
 
-            for ( i = 0; i < arr.length; i++)
-            {
+            for (i = 0; i < arr.length; i++) {
                 if (arr[i] < arr[mn])
                     mn = i;
                 if (arr[i] > arr[mx])
                     mx = i;
             }
-
             int tmp = arr[mx];
             arr[mx] = arr[mn];
-            arr[mn]  = tmp;
-            for ( i = 0; i < arr.length; i++)
-            {
+            arr[mn] = tmp;
+            for (i = 0; i < arr.length; i++) {
                 System.out.println(arr[i]);
             }
-
         }
         return swap;
+    }
+
+    public static String compare(int[] arr, double sum1) {
+        String compare = "";
+        for (int i = 0; i < arr.length; ++i) ;
+
+        double averege1 = sum1 / arr.length / 2;
+        ;
+        for (int i = (arr.length - 1); i >= (arr.length) / 2; --i) {
+            sum1 = sum1 + arr[i];
+            averege1 = sum1 / arr.length / 2;
+
+        }
+
+        System.out.println("");
+
+        double averege2 = sum1 / arr.length / 2;
+        ;
+        for (int i = ((arr.length / 2 - 1)); i >= 0; --i) {
+            sum1 = sum1 + arr[i];
+            averege2 = sum1 / arr.length / 2;
+        }
+        if (averege1 < averege2) {
+            for (int i = (arr.length - 1); i >= (arr.length) / 2; --i) {
+                System.out.println("" + arr[i]);
+            }
+        } else {
+            for (int i = ((arr.length / 2 - 1)); i >= 0; --i)
+                System.out.println("" + arr[i]);
+        }
+        return compare;
     }
 
 
