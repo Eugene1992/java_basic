@@ -2,34 +2,30 @@ package hw5;
 
 import java.util.Scanner;
 
+import static java.lang.Math.max;
+import static java.lang.Math.min;
+
 /**
  * Created by Оксана on 19.10.2015.
  * 1. Вывести в консоль все парные числа одномерного массива
- 2. Вывести все числа одномерного массива в обратном порядке
- 3. Вывести первую и вторую половину одномерного массива
- 4. Вывести первую и вторую половину одномерного массива в обратном порядке
- 5. Найти сумму все элементов в массиве
- 6. Найти среднеарифметическое всех чисел массива
-
-
-
-
-
+ * 2. Вывести все числа одномерного массива в обратном порядке
+ * 3. Вывести первую и вторую половину одномерного массива
+ * 4. Вывести первую и вторую половину одномерного массива в обратном порядке
+ * 5. Найти сумму все элементов в массиве
+ * 6. Найти среднеарифметическое всех чисел массива
  */
 public class MethodTask {
     public static void main(String[] args) {
 
         Scanner read = new Scanner(System.in);
-        int sum1 = 0;
+        double sum1 = 0;
         System.out.println("Enter the size of array: ");
         int size = read.nextInt();
         System.out.println("Enter the elements of array: ");
         int[] arr1 = new int[size];
         for (int i = 0; i < size; ++i)
             arr1[i] = read.nextInt();
-        for (int i = 0; i < size; ++i)
-
-        {
+        for (int i = 0; i < size; ++i) {
             System.out.println("Enter the number of task");
             int task = read.nextInt();
             switch (task) {
@@ -46,7 +42,16 @@ public class MethodTask {
                     System.out.println(partchange(arr1));
                     break;
                 case 5:
-                    System.out.println(sum(arr1,sum1));
+                    System.out.println(sum(arr1, sum1));
+                    break;
+                case 6:
+                    System.out.println(average(arr1, sum1));
+                    break;
+                case 7:
+                    System.out.println(maxmin(arr1));
+                    break;
+                case 8:
+                    System.out.println(negative(arr1));
                     break;
                 default:
                     System.out.println("?");
@@ -105,7 +110,7 @@ public class MethodTask {
         return partchange;
     }
 
-    public static String sum(int[] arr,int sum1) {
+    public static String sum(int[] arr, double sum1) {
         String sum = "";
         for (int i = 0; i < arr.length; ++i) {
             for (i = 0; i < arr.length; i++) {
@@ -116,4 +121,43 @@ public class MethodTask {
 
         return sum;
     }
+
+    public static String average(int[] arr, double sum1) {
+        String average = "";
+
+        for (int i = 0; i < arr.length; ++i)
+            for (i = 0; i < arr.length; ++i)
+                sum1 = sum1 + arr[i];
+        double averege = sum1 / arr.length;
+        System.out.println("Avarage number of all elements in array " + averege);
+        return average;
+    }
+
+    public static String maxmin(int[] arr) {
+        String minmax = "";
+        for (int i = 0; i < arr.length; ++i) ;
+        int mn, mx;
+        mn = mx = arr[0];
+        for (int i = 0; i < arr.length; ++i) {
+            mn = min(mn, arr[i]);
+            mx = max(mx, arr[i]);
+        }
+        System.out.print("Max and min elements  ");
+        System.out.println(mx + " " + mn);
+
+        return minmax;
+    }
+    public static String negative(int[] arr){
+        String negative ="";
+        for (int i = 0; i < arr.length; ++i);
+        for (int i = 0; i < arr.length; ++i) {
+            if (arr[i] < 0) {
+                arr[i] = 0;}
+            System.out.print( arr[i]+" " );
+
+        }
+        return negative;
+    }
+
 }
+
