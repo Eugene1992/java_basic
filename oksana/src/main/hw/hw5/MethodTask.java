@@ -53,6 +53,25 @@ public class MethodTask {
                 case 8:
                     System.out.println(negative(arr1));
                     break;
+                case 9:
+                    System.out.println();
+                    break;
+                case 10:
+                    System.out.println(swap(arr1));
+                    break;
+                case 11:
+                    System.out.println();
+                    break;
+                case 12:
+                    System.out.println();
+                    break;
+                case 13:
+                    System.out.println();
+                    break;
+                case 14:
+                    System.out.println();
+                    break;
+
                 default:
                     System.out.println("?");
             }
@@ -147,17 +166,49 @@ public class MethodTask {
 
         return minmax;
     }
-    public static String negative(int[] arr){
-        String negative ="";
-        for (int i = 0; i < arr.length; ++i);
+
+    public static String negative(int[] arr) {
+        String negative = "";
+        for (int i = 0; i < arr.length; ++i) ;
         for (int i = 0; i < arr.length; ++i) {
             if (arr[i] < 0) {
-                arr[i] = 0;}
-            System.out.print( arr[i]+" " );
+                arr[i] = 0;
+            }
+            System.out.print(arr[i] + " ");
 
         }
         return negative;
     }
+
+    public static String swap(int[] arr) {
+        String swap = "";
+        for (int i = 0; i < arr.length; ++i) ;
+        int mn, mx;
+        mn = mx = arr[0];
+        for (int i = 0; i < arr.length; ++i) {
+            mn = min(mn, arr[i]);
+            mx = max(mx, arr[i]);
+
+            for ( i = 0; i < arr.length; i++)
+            {
+                if (arr[i] < arr[mn])
+                    mn = i;
+                if (arr[i] > arr[mx])
+                    mx = i;
+            }
+
+            int tmp = arr[mx];
+            arr[mx] = arr[mn];
+            arr[mn]  = tmp;
+            for ( i = 0; i < arr.length; i++)
+            {
+                System.out.println(arr[i]);
+            }
+
+        }
+        return swap;
+    }
+
 
 }
 
