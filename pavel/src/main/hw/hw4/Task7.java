@@ -7,9 +7,7 @@ import java.util.Scanner;
  */
 public class Task7 {
     public static void main(String[] args) {
-
-
-        for (int i = 0; i < 8; i++) {
+            for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++)
                 if ((i + j) % 2 == 0)
                     for (int z = 0; z < 4; z++)
@@ -18,7 +16,6 @@ public class Task7 {
                 else
                     for (int z = 0; z < 4; z++) {
                         System.out.print("Ж ");
-
                     }
                         System.out.println();
         }
