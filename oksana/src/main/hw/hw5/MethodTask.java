@@ -63,13 +63,13 @@ public class MethodTask {
                     System.out.println(compare(arr1, sum1));
                     break;
                 case 11:
-                    System.out.println(index(arr1,sum1));
+                    System.out.println(index(arr1, sum1));
                     break;
                 case 13:
                     System.out.println();
                     break;
                 case 14:
-                    System.out.println();
+                    System.out.println(zero(arr1));
                     break;
 
                 default:
@@ -235,19 +235,32 @@ public class MethodTask {
         }
         return compare;
     }
-    public static String index(int[] arr,double sum1){
-        String index="";
-        for ( int i = 0; i < arr.length; ++i)
-        {
-            if(arr[i] > 0)
-                System.out.println(""+ i);
-            if(arr[i] < 0)
+
+    public static String index(int[] arr, double sum1) {
+        String index = "";
+        for (int i = 0; i < arr.length; ++i) {
+            if (arr[i] > 0)
+                System.out.println("" + i);
+            if (arr[i] < 0)
                 sum1 += arr[i];
         }
-        System.out.println(""+sum1);
+        System.out.println("" + sum1);
         return index;
     }
+
+    public static String zero(int[] arr) {
+        String zero = "";
+        for (int i = 0; i < arr.length; ++i) {
+            if (arr[i] == 0) {
+                for (i = 0; i <= arr[i]; ++i) {
+                    System.out.println("" + arr[i]);
+                }
+            }
+
+        }
+        return zero;
     }
+}
 
 
 
