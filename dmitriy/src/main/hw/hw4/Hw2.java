@@ -39,7 +39,7 @@ public class Hw2 {
 
             case 2:
 
-                System.out.print("Бінарний код числа " + a + " є ");
+                System.out.print("Код у 8-ми значній системі числа " + a + " є ");
                 StringBuilder c = new StringBuilder();
                 do {
                     c.append(a % 2);
@@ -49,7 +49,9 @@ public class Hw2 {
                 break;
 
             case 3:
-                //a = 125;
+                System.out.print("Код у 16-ти значній системі числа " + a + " є ");
+                System.out.println(Integer.toString(a, 16));
+ /**               //a = 125;
                 //int counter = 0;
 
                 int z = a / 16; // вираховуємо ціле число вираховуємо скільки 16-ток вміщається в числі а
@@ -103,7 +105,7 @@ public class Hw2 {
                 v = a - x; // залишок від віднімання (13)
                 System.out.print(v);
             }
-            break;
+            break;*/
             }
         }
     }

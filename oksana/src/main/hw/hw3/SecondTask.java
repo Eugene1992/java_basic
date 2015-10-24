@@ -14,11 +14,15 @@ public class SecondTask {
         double b = 8.5;
         double c = 11.45;
 
+
         if ((byte)(a - b) < (byte)(c - b)) {
             System.out.println("Число " + c  );
         }else{
 
-                System.out.println("Число " + b);
+            System.out.println("Число " + b);
+            }
+
+
             }
         }
-    }
+
