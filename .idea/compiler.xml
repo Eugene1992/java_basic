@@ -22,8 +22,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="dima" />
         <module name="dmitriy" />
         <module name="examples" />
+        <module name="fsf" />
         <module name="oksana" />
         <module name="pavel" />
         <module name="sergey" />
