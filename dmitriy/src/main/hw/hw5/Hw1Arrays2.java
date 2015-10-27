@@ -50,7 +50,7 @@ public class Hw1Arrays2 {
         mas[1] = -10;
         mas[2] = 32;
         mas[3] = 76;
-        mas[4] = -15;
+        mas[4] = -12;
         mas[5] = -3;
 
         for (int i = 0; i < mas.length; i++) System.out.print(mas[i] + " ");// виводимо масив
@@ -66,15 +66,15 @@ public class Hw1Arrays2 {
         }
         System.out.println();
         //-----------------------------------------------------------------
-        System.out.print("Сумма відємних чисал в масиві - ");
+
+        System.out.print("Сумма відємних чисал в масиві = ");
         int sumMin = 0;
 
         for (int i = 0; i < mas.length; i++){
-            while (mas[i] < 0){
+            if (mas[i] < 0){
                 sumMin = sumMin + (mas[i]);
             }
-            System.out.println(sumMin);
-        }
+        }System.out.print(sumMin);
 
     }
 }
