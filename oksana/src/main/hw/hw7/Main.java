@@ -1,9 +1,5 @@
 package hw7;
 
-import java.util.Arrays;
-
-import static java.lang.Math.max;
-import static java.lang.Math.min;
 
 /**
  * Created by Оксана on 26.10.2015.
@@ -11,43 +7,61 @@ import static java.lang.Math.min;
 public class Main {
     public static void main(String[] args) {
         Student nameStudentOne = new Student();
-        nameStudentOne.name = "Kate";
-        nameStudentOne.sername = "Ivanova";
+        nameStudentOne.name = " Kate";
+        nameStudentOne.sername = " Ivanova";
         nameStudentOne.mark = 10;
 
         Student nameStudentSecond = new Student();
-        nameStudentSecond.name = "Oleg";
-        nameStudentSecond.sername = "Ivanov";
+        nameStudentSecond.name = " Oleg";
+        nameStudentSecond.sername = " Ivanov";
         nameStudentSecond.mark = 7;
 
         Student nameStudentThird = new Student();
-        nameStudentThird.name = "Ira";
-        nameStudentThird.sername = "Belkina";
+        nameStudentThird.name = " Ira";
+        nameStudentThird.sername = " Belkina";
         nameStudentThird.mark = 11;
 
         Student vika = new Student();
-        vika.name = "Vika";
-        vika.sername = "Sinchugova";
+        vika.name = " Vika";
+        vika.sername = " Sinchugova";
         vika.mark = 12;
 
         Student artem = new Student();
-        artem.name = "Artem";
-        artem.sername = "Usenko";
+        artem.name = " Artem ";
+        artem.sername = " Usenko ";
         artem.mark = 9;
 
-        int[] arr= {vika.mark,artem.mark, nameStudentOne.mark, nameStudentSecond.mark, nameStudentThird.mark};
 
-            int mn, mx;
-            mn = mx = arr[0];
-            for (int i = 0; i < arr.length; ++i) {
-                mn = min(mn, arr[i]);
-                mx = max(mx, arr[i]);
+        Student[] students = new Student[5];
+        for (int i = 0; i < 5; ++i) {
+            students[0] = nameStudentOne;
+            students[1] = nameStudentSecond;
+            students[2] = nameStudentThird;
+            students[3] = vika;
+            students[4] = artem;
+            System.out.println(students[i]);
+        }
+
+        for (int i = 0; i < 5; i++) {
+            if ((students[i].mark % 2 == 0)) {
+                System.out.print(" " + students[i].mark);
             }
-        System.out.println("Min"+mn);
-        System.out.println("Max"+mx);
+        }
+        System.out.println("");
 
+        for (int i = (students.length - 1); i >= 0; --i) {
+            System.out.println(" " + students[i].mark);
 
         }
 
+
     }
+
+
+}
+
+
+
+
+
 
