@@ -50,7 +50,7 @@ public class Main {
         System.out.println("");
 
         for (int i = (students.length - 1); i >= 0; --i) {
-            System.out.println(" " + students[i]);
+            System.out.println(" " + students[i].mark);
 
         }
 
