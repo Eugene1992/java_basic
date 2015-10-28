@@ -1,8 +1,11 @@
 package hw7;
 
 
+import java.util.Arrays;
+
 import static java.lang.Math.max;
 import static java.lang.Math.min;
+import static java.lang.Math.subtractExact;
 
 /**
  * Created by Оксана on 26.10.2015.
@@ -15,7 +18,7 @@ public class Main {
         Student nameStudentOne = new Student();
         nameStudentOne.name = " Kate";
         nameStudentOne.sername = " Ivanova";
-        nameStudentOne.mark = 6;
+        nameStudentOne.mark = 12;
 
         Student nameStudentSecond = new Student();
         nameStudentSecond.name = " Oleg";
@@ -86,28 +89,30 @@ public class Main {
         }
         System.out.println("");
 
-        //Найти и вывести сумму всех оценок обьектов массива.
+        // Найти минимальную и максимальную оценку в массиве обьектов.
+        for (int i = 0; i <students.length ; i++) {
+            int min = students[i].mark;
+            int min_i = i;
+            for (int j = i+1; j <students.length ; j++) {
+                if(students[j].mark <min){
+                    min = students[j].mark;
+                    min_i=j;
+                }
 
-        for (int i = 0; i < students.length; i++) {
-            sum = sum + students[i].mark;
-            System.out.println("Sum =" + sum);
+            }
+            if ( i != min_i){
+                int tmp = students[i].mark;
+                students[i].mark = students[min_i].mark;
+                students[min_i].mark = tmp;
+            }
         }
-        System.out.println("");
-
-        // Найти среднеарифметическое всех оценок обьектов массива.
-
-        for (int i = 0; i < students.length; i++) {
-            sum = sum + students[i].mark;
-            double average = sum / students.length;
-            System.out.println("avarage =" + average);
-        }
-
-
-        System.out.println("");
+        System.out.println("Min "+students[0].mark );
+        System.out.println("Max "+students[4].mark );
 
 
         //Заменить все парные оценки в массиве обьектов на 0.
         for (int i = 0; i < students.length; i++) {
+
 
             if ((students[i].mark % 2 == 0)) {
                 students[i].mark = 0;
@@ -116,50 +121,8 @@ public class Main {
         }
         System.out.println("");
 
-        //Найти минимальную и максимальную оценку в массиве обьектов
-
-        for (int i = 0; i < students.length; ++i) ;
-        int min, max;
-        min = max = students[0].mark;
-
-        for (int i = 0; i < students.length; ++i) {
-            min = min(min, students[i].mark);
-            max = max(max, students[i].mark);
-
-        }
-        System.out.print("Max and min elements  ");
-        System.out.println(max + " " + min);
 
 
-        // Подсчитать и вывести в консоль одинаковые оценки в массиве обьектов.
-
-
-        // Найти индексы положительных оценок(которые > 8) и сумму негативных оценок(которые < 8) в массиве обьектов.
-        for (int i = 0; i < 5; i++) {
-            if ((students[i].mark >= 8)) {
-                System.out.println("> 8 ");
-                System.out.println(" " + students[i].mark);
-            } else {
-                System.out.println("< 8");
-                System.out.println(" " + students[i].mark);
-            }
-        }
-        System.out.println("");
-
-        //Вывести на печать все оценки обьектов с индексом меньше 3 включительно.
-        for (int i = 0; i <= 3; i++) {
-            System.out.println(students[i].mark);
-
-        }
-
-        //Написать метод, который перемещает в конец массива все элементы, значения которых находится в отрезке [3,8].
-        for (int i = 0; i < students.length; i++) {
-            if (i >= 3 & i <= 8) {
-
-            }
-
-
-        }
     }
 }
 
