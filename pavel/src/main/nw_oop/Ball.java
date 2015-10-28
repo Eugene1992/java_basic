@@ -1,11 +1,9 @@
 package test1;
 
-import java.util.Arrays;
-
 public class Ball {
     public static void main(String[] args) {
         Student student1 = new Student();
-        student1.name = "Тест1";
+        student1.name = "Тест1";`
         student1.lastName = "Тест1";
         student1.ball = 10;
 
