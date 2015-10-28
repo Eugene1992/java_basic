@@ -46,12 +46,13 @@ public class Hw1Arrays2 {
 
 //------------------------------------------13. Найти индексы положительных чисел и сумму отрицательных чисел в одномерном массиве
 
-        mas[0] = 1;   // заповнюємо масив
+        mas[0] = 14;   // заповнюємо масив
         mas[1] = -10;
-        mas[2] = 32;
+        mas[2] = 0;
         mas[3] = 76;
         mas[4] = -12;
         mas[5] = -3;
+
 
         for (int i = 0; i < mas.length; i++) System.out.print(mas[i] + " ");// виводимо масив
         System.out.println();
@@ -70,13 +71,92 @@ public class Hw1Arrays2 {
         System.out.print("Сумма відємних чисал в масиві = ");
         int sumMin = 0;
 
-        for (int i = 0; i < mas.length; i++){
-            if (mas[i] < 0){
+        for (int i = 0; i < mas.length; i++) {
+            if (mas[i] < 0) {
                 sumMin = sumMin + (mas[i]);
             }
-        }System.out.print(sumMin);
+        }
+        System.out.print(sumMin);
+
+        //---------------14. Дан массив чисел, среди которых имеется один ноль. Вывести на печать все числа до нуля включительно.
+        System.out.println();
+
+        System.out.print("Значення змінних в масиві до нуля включно - ");
+
+        for (int i = 0; i < mas.length; i++) {
+            if (mas[i] != 0) {
+                System.out.print(mas[i] + " ");
+            } else {
+                System.out.println(mas[i]);
+                break;
+            }
+        }
+        System.out.println();
+//--------------------15. Написать программу, меняющую местами два наибольших элемента одномерного массива с первым и последним.
+
+        int max = 0;
+        int max2 = 0;
+
+
+        for (int i = 0; i < mas.length; i++) {
+            if (max < mas[i]) max = mas[i];
+        }
+        System.out.print("Max = " + max);
+        System.out.print(" ; ");
+        for (int i = 0; i < mas.length; i++) {
+            if (max != mas[i] && max2 < mas[i]) {
+                max2 = mas[i];
+            }
+        }
+        System.out.println("Маx2 = " + max2);
+        System.out.println();
+
+
+        for (int i = 0; i < mas.length; i++) {
+            if (mas[i] == max) {
+                int v = mas[i];
+                mas[i] = mas[0];
+                mas[0] = v;
+            }
+            if (mas[i] == max2) {
+                int v = mas[i];
+                mas[i] = mas[5];
+                mas[5] = v;
+            }
+        }
+        System.out.print("Масі с заміненими значеннями - ");
+
+        for (int i = 0; i < mas.length; i++) System.out.print(mas[i] + " ");// виводимо масив
+        System.out.println();
+
+
+        //16. Написать программу, которая выводит на экран элементы одномерного массива, которые расположены до минимального элемента всего массива
+
+        System.out.println("Єлєменти масива до най меньшого значення - ");
+
+        int min = max;
+
+        for (int i = 0; i < mas.length; i++) {
+            if (min > mas[i]) {
+                min = mas[i];
+            }
+        }
+        System.out.println("Мін = " + min);
+
+        for (int i = 0; i < mas.length; i++) {
+            if (mas[i] != min){
+                System.out.print(mas[i] + " ");
+            }
+            else if (mas[i] == min){
+                System.out.print(min + " ");
+                i = mas.length;
+            }
+
+        }
+        System.out.println();
 
     }
+
 }
 
 
