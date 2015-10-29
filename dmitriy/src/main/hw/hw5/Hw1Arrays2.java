@@ -154,6 +154,20 @@ public class Hw1Arrays2 {
 
         }
         System.out.println();
+//---------------17. Найти сумму всех чисел находящихся между минимальным и максимальным числом в массиве
+
+        System.out.println("Сумма чисел між максимальним та мінімальним значеннями - ");
+
+        int sum = 0;
+
+        for (int i = 0; i < mas.length; i++) {
+            if (mas[i] == max){
+                sum = sum + mas[i];
+            }
+        }
+
+
+
 
     }
 
