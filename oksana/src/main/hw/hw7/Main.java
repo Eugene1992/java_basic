@@ -51,8 +51,6 @@ public class Main {
                     }
                 }
                 System.out.println("");
-                System.out.println("Before");
-                System.out.print(before(students, nameStudentOne, nameStudentSecond, nameStudentThird, vika, artem));
                 break;
             case 2:
                 //Вывести все оценки обьектов массива в обратном порядке.
@@ -60,8 +58,6 @@ public class Main {
                 for (int i = (students.length - 1); i >= 0; --i) {
                     System.out.println(" " + students[i].mark);
                 }
-                System.out.println("Before");
-                System.out.print(before(students, nameStudentOne, nameStudentSecond, nameStudentThird, vika, artem));
                 break;
             case 3:
                 // Вывести первую и вторую половину оценок массива обьектов.
@@ -74,8 +70,6 @@ public class Main {
                     System.out.print(" " + students[i].mark);
                 }
                 System.out.println("");
-                System.out.println("Before");
-                System.out.print(before(students, nameStudentOne, nameStudentSecond, nameStudentThird, vika, artem));
                 break;
             case 4:
                 //Вывести первую и вторую половину оценок массива обьектов в обратном порядке.
@@ -88,8 +82,6 @@ public class Main {
                     System.out.print(" " + students[i].mark);
                 }
                 System.out.println("");
-                System.out.println("Before");
-                System.out.print(before(students, nameStudentOne, nameStudentSecond, nameStudentThird, vika, artem));
                 break;
             case 5:
                 // Найти минимальную и максимальную оценку в массиве обьектов.
@@ -112,8 +104,6 @@ public class Main {
                 }
                 System.out.println("Min " + students[0].mark);
                 System.out.println("Max " + students[4].mark);
-                System.out.println("Before");
-                System.out.print(before(students, nameStudentOne, nameStudentSecond, nameStudentThird, vika, artem));
                 break;
             case 6:
                 //Заменить все парные оценки в массиве обьектов на 0.
@@ -125,16 +115,12 @@ public class Main {
                     System.out.println("" + students[i].mark);
                 }
                 System.out.println("");
-                System.out.println("Before");
-                System.out.print(before(students, nameStudentOne, nameStudentSecond, nameStudentThird, vika, artem));
                 break;
             case 7:
                 //Вывести на печать все оценки обьектов с индексом меньше 3 включительно.
                 System.out.println("Вывести на печать все оценки обьектов с индексом меньше 3 включительно.");
                 for (int i = 0; i <= 3; i++) {
                     System.out.println(students[i].mark);
-                    System.out.println("Before");
-                    System.out.print(before(students, nameStudentOne, nameStudentSecond, nameStudentThird, vika, artem));
                 }
                 break;
             case 8:
@@ -144,8 +130,7 @@ public class Main {
                     sum = sum + students[i].mark;
                 }
                 System.out.println("Sum =" + sum);
-                System.out.println("Before");
-                System.out.print(before(students, nameStudentOne, nameStudentSecond, nameStudentThird, vika, artem));
+
                 break;
             case 9:
                 // Найти среднеарифметическое всех оценок обьектов массива.
@@ -181,8 +166,6 @@ public class Main {
                     students[4].mark = a;
                     System.out.println(students[i].mark);
                 }
-                System.out.println("Before");
-                System.out.print(before(students, nameStudentOne, nameStudentSecond, nameStudentThird, vika, artem));
                 break;
             case 11:
                 // 12. Вывести в консоль половину оценок массива обьектов, среднеарифметическое оценок которых является наибольшим.
@@ -204,8 +187,6 @@ public class Main {
                         System.out.println(students[i].mark);
                     }
                 }
-                System.out.println("Before");
-                System.out.print(before(students, nameStudentOne, nameStudentSecond, nameStudentThird, vika, artem));
                 break;
             case 12:
                 // 13. Найти индексы положительных оценок(которые > 8) и сумму негативных оценок(которые < 8) в массиве обьектов
@@ -218,8 +199,6 @@ public class Main {
                         System.out.println("<8 " + i);
                     }
                 }
-                System.out.println("Before");
-                System.out.print(before(students, nameStudentOne, nameStudentSecond, nameStudentThird, vika, artem));
                 break;
             case 13:
                 //Поменять местами две наибольшие оценки с первой и последней оценками в массивеобьектов.
@@ -250,8 +229,6 @@ public class Main {
                     sum = sum + students[i].mark;
                 }
                 System.out.println(+sum);
-                System.out.println("Before");
-                System.out.print(before(students, nameStudentOne, nameStudentSecond, nameStudentThird, vika, artem));
                 break;
             case 16:
                 // Вывести в консоль половину массива в которой находиться наименьшая оценка обьекта.
@@ -278,18 +255,6 @@ public class Main {
         }
     }
 
-    public static String before(Student[] students, Student nameStudentOne, Student nameStudentSecond, Student nameStudentThird, Student vika, Student artem) {
-        String before = "";
-        for (int i = 0; i < 5; ++i) {
-            students[0] = nameStudentOne;
-            students[1] = nameStudentSecond;
-            students[2] = nameStudentThird;
-            students[3] = vika;
-            students[4] = artem;
-            System.out.println(students[i].mark);
-        }
-        return before;
-    }
 }
 
 
