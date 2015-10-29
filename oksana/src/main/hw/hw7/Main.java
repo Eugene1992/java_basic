@@ -35,6 +35,7 @@ public class Main {
             students[4] = artem;
             System.out.println(students[i]);
         }
+
         double average = sum / students.length;
         double average1 = sum / (students.length / 2);
         double average2 = sum / (students.length - students.length / 2);
@@ -51,6 +52,7 @@ public class Main {
                     }
                 }
                 System.out.println("");
+                System.out.println(before(students,nameStudentOne,nameStudentSecond,nameStudentThird,vika,artem));
                 break;
             case 2:
                 //Вывести все оценки обьектов массива в обратном порядке.
@@ -58,6 +60,7 @@ public class Main {
                 for (int i = (students.length - 1); i >= 0; --i) {
                     System.out.println(" " + students[i].mark);
                 }
+                System.out.println(before(students,nameStudentOne,nameStudentSecond,nameStudentThird,vika,artem));
                 break;
             case 3:
                 // Вывести первую и вторую половину оценок массива обьектов.
@@ -70,6 +73,7 @@ public class Main {
                     System.out.print(" " + students[i].mark);
                 }
                 System.out.println("");
+                System.out.println(before(students,nameStudentOne,nameStudentSecond,nameStudentThird,vika,artem));
                 break;
             case 4:
                 //Вывести первую и вторую половину оценок массива обьектов в обратном порядке.
@@ -82,6 +86,7 @@ public class Main {
                     System.out.print(" " + students[i].mark);
                 }
                 System.out.println("");
+                System.out.println(before(students,nameStudentOne,nameStudentSecond,nameStudentThird,vika,artem));
                 break;
             case 5:
                 // Найти минимальную и максимальную оценку в массиве обьектов.
@@ -104,6 +109,7 @@ public class Main {
                 }
                 System.out.println("Min " + students[0].mark);
                 System.out.println("Max " + students[4].mark);
+                System.out.println(before(students,nameStudentOne,nameStudentSecond,nameStudentThird,vika,artem));
                 break;
             case 6:
                 //Заменить все парные оценки в массиве обьектов на 0.
@@ -115,6 +121,7 @@ public class Main {
                     System.out.println("" + students[i].mark);
                 }
                 System.out.println("");
+                System.out.println(before(students,nameStudentOne,nameStudentSecond,nameStudentThird,vika,artem));
                 break;
             case 7:
                 //Вывести на печать все оценки обьектов с индексом меньше 3 включительно.
@@ -122,6 +129,7 @@ public class Main {
                 for (int i = 0; i <= 3; i++) {
                     System.out.println(students[i].mark);
                 }
+                System.out.println(before(students,nameStudentOne,nameStudentSecond,nameStudentThird,vika,artem));
                 break;
             case 8:
                 //Найти и вывести сумму всех оценок обьектов массива.
@@ -130,6 +138,7 @@ public class Main {
                     sum = sum + students[i].mark;
                 }
                 System.out.println("Sum =" + sum);
+                System.out.println(before(students,nameStudentOne,nameStudentSecond,nameStudentThird,vika,artem));
 
                 break;
             case 9:
@@ -140,7 +149,7 @@ public class Main {
                     average = sum / students.length;
                 }
                 System.out.println("avarage =" + average);
-
+                System.out.println(before(students,nameStudentOne,nameStudentSecond,nameStudentThird,vika,artem));
                 break;
             case 10:
                 //11. Поменять минимальную и максимальную оценки в массиве обьектов местами.
@@ -166,6 +175,7 @@ public class Main {
                     students[4].mark = a;
                     System.out.println(students[i].mark);
                 }
+                System.out.println(before(students,nameStudentOne,nameStudentSecond,nameStudentThird,vika,artem));
                 break;
             case 11:
                 // 12. Вывести в консоль половину оценок массива обьектов, среднеарифметическое оценок которых является наибольшим.
@@ -187,6 +197,7 @@ public class Main {
                         System.out.println(students[i].mark);
                     }
                 }
+                System.out.println(before(students,nameStudentOne,nameStudentSecond,nameStudentThird,vika,artem));
                 break;
             case 12:
                 // 13. Найти индексы положительных оценок(которые > 8) и сумму негативных оценок(которые < 8) в массиве обьектов
@@ -199,6 +210,7 @@ public class Main {
                         System.out.println("<8 " + i);
                     }
                 }
+                System.out.println(before(students,nameStudentOne,nameStudentSecond,nameStudentThird,vika,artem));
                 break;
             case 13:
                 //Поменять местами две наибольшие оценки с первой и последней оценками в массивеобьектов.
@@ -215,6 +227,7 @@ public class Main {
                 for (int i = 0; i <= b; i++) {
                     System.out.println(students[i].mark);
                 }
+                System.out.println(before(students,nameStudentOne,nameStudentSecond,nameStudentThird,vika,artem));
                 break;
             case 15:
                 // Найти сумму всех оценок находящихся между минимальной и максимальной оценками в массиве обьектов.
@@ -229,6 +242,7 @@ public class Main {
                     sum = sum + students[i].mark;
                 }
                 System.out.println(+sum);
+                System.out.println(before(students,nameStudentOne,nameStudentSecond,nameStudentThird,vika,artem));
                 break;
             case 16:
                 // Вывести в консоль половину массива в которой находиться наименьшая оценка обьекта.
@@ -245,6 +259,7 @@ public class Main {
                         System.out.println(students[i].mark);
                     }
                 }
+                System.out.println(before(students,nameStudentOne,nameStudentSecond,nameStudentThird,vika,artem));
                 break;
             case 17:
 
@@ -254,6 +269,18 @@ public class Main {
                 System.out.println("?");
         }
     }
+    public static String before(Student[] students,Student nameStudentOne,Student nameStudentSecond, Student nameStudentThird, Student vika,Student artem ){
+        String before="";
+        System.out.print("Before:");
+        for (int i = 0; i <5 ; i++) {
+            System.out.print(" " + students[i].mark);
+
+        }
+        return before;
+    }
+
+
+
 
 }
 
