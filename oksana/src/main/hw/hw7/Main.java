@@ -235,7 +235,6 @@ public class Main {
                 }
                 for (int i = 0; i <= b; i++) {
                     System.out.println(students[i].mark);
-
                 }
                 break;
             case 15:
@@ -256,17 +255,26 @@ public class Main {
                 break;
             case 16:
                 // Вывести в консоль половину массива в которой находиться наименьшая оценка обьекта.
+                int v = 0;
+                for (int i = 0; i < students.length; ++i) {
+                    if (students[v].mark > students[i].mark) v = i;
+                }
+                if (v < students.length / 2) {
+                    for (int i = 0; i < students.length / 2; i++) {
+                        System.out.println(students[i].mark);
+                    }
+                } else {
+                    for (int i = students.length / 2; i < students.length; i++) {
+                        System.out.println(students[i].mark);
+                    }
+                }
                 break;
             case 17:
-                //Написать метод, который перемещает в конец массива все элементы, значения которых находится в отрезке [3,8].
 
                 break;
-
 
             default:
                 System.out.println("?");
-
-
         }
     }
 
@@ -279,12 +287,10 @@ public class Main {
             students[3] = vika;
             students[4] = artem;
             System.out.println(students[i].mark);
-
         }
         return before;
     }
 }
-
 
 
 
