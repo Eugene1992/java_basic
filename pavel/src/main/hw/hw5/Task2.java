@@ -1,7 +1,7 @@
 package hw5;
 
 /**
- * Created by ppota on 10/18/2015.
+ * 2. Вывести все числа одномерного массива в обратном порядке
  */
 public class Task2 {
 
