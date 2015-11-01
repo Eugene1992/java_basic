@@ -1,8 +1,5 @@
 package hw5;
-
-        import java.util.Arrays;
-        import java.util.Random;
-        import java.util.Scanner;
+//1. Вывести в консоль все парные числа одномерного массива
 
 /**
  * Created by ppota on 10/18/2015.

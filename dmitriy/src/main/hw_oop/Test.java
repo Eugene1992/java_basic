@@ -13,18 +13,20 @@
 public class Test {
     public static void main(String[] args) {
 
-        Scholboy one = new Scholboy("Andry", "Petrov", 18);
-        Scholboy two = new Scholboy("Andriy", "Menson", 25);
-        Scholboy three = new Scholboy("Benya", "Tuhly", 50);
-        Scholboy four = new Scholboy("Vadik", "Salabon", 44);
-        Scholboy five = new Scholboy("Grigory", "Edakiy", 29);
-        Scholboy six = new Scholboy("Dulche", "Gabanna", 22);
-        Scholboy seven = new Scholboy("Subzero", "Olegovich", 25);
-        Scholboy eith = new Scholboy("Super", "Man", 65);
-        Scholboy nine = new Scholboy("Andriy", "Gerashenko", 15);
-        Scholboy teen = new Scholboy("Oleg", "Lashko", 98);
+        Schoolboy one = new Schoolboy("Andry", "Petrov", 18);
+        Schoolboy two = new Schoolboy("Andriy", "Menson", 25);
+        Schoolboy three = new Schoolboy("Benya", "Tuhly", 50);
+        Schoolboy four = new Schoolboy("Vadik", "Salabon", 44);
+        Schoolboy five = new Schoolboy("Grigory", "Edakiy", 29);
+        Schoolboy six = new Schoolboy("Dulche", "Gabanna", 22);
+        Schoolboy seven = new Schoolboy("Subzero", "Olegovich", 25);
+        Schoolboy eith = new Schoolboy("Super", "Man", 65);
+        Schoolboy nine = new Schoolboy("Andriy", "Gerashenko", 15);
+        Schoolboy teen = new Schoolboy("Oleg", "Lashko", 98);
 
-        Scholboy studentArr[] = new Scholboy[10];
+        Schoolboy studentArr[] = new Schoolboy[10];
+
+        Schoolboy studentArrCopy[] = new Schoolboy[10];
 
         studentArr[0] = one ;
         studentArr[1] = two;
@@ -36,6 +38,7 @@ public class Test {
         studentArr[7] = eith;
         studentArr[8] = nine;
         studentArr[9] = teen;
+
 
         /**1. Вывести в консоль значения полей каждого из обьектов в формате: "<имя> <фамилия> получил оценку <оценка>!".
          Пример: "Иванов Иван получил оценку 10!".
@@ -58,11 +61,13 @@ public class Test {
         System.out.println();
 
         for (int i = 0; i < studentArr.length ; i++) {
-
-            System.out.println(studentArr[i]);
-
+            //        System.out.println(studentArr[i]);
             System.out.println(studentArr[i].name + " " + studentArr[i].surname + " got  - " + studentArr[i].assessment);
         }
+        System.out.println();
+
+
+
             //-------------------------------------------------------------------2. Вывести в консоль все парные оценки обьектов массива.
         System.out.println();
         System.out.print("All even assessment - ");
@@ -140,6 +145,8 @@ public class Test {
         System.out.println(max);
         System.out.println();
         //------------------------9. Заменить все парные оценки в массиве обьектов на 0.
+
+
         System.out.print("Change the paired assessment to zero - ");
 
         for (int i = 0; i < studentArr.length; i++) {
@@ -153,18 +160,55 @@ public class Test {
 
         //----------------10. Подсчитать и вывести в консоль одинаковые оценки в массиве обьектов.
 
+        System.out.println();
+        System.out.print("Repeat array - ");
+
+        studentArr[0].assessment = 18 ;
+        studentArr[1].assessment = 25;
+        studentArr[2].assessment = 50;
+        studentArr[3].assessment = 44;
+        studentArr[4].assessment = 25;
+        studentArr[5].assessment = 18;
+        studentArr[6].assessment = 29;
+        studentArr[7].assessment = 25;
+        studentArr[8].assessment = 65;
+        studentArr[9].assessment = 98;
+
+        for (int i = 0; i < studentArr.length ; i++) {
+            //        System.out.println(studentArr[i]);
+            System.out.println(studentArr[i].name + " " + studentArr[i].surname + " got  - " + studentArr[i].assessment);
+        }
+        System.out.println();
+
+
+
+
+
         System.out.print("The same amount of elements in the array - ");
         int counter = 0;
 
        for (int i = 0; i < studentArr.length; i++) {
            for (int j = studentArr.length - 1; j != i; j--) {
                if (studentArr[j].assessment == studentArr[i].assessment && studentArr[i].assessment != 0 && studentArr[j].assessment != 0){
-                    studentArr[i].assessment = 0;
                     studentArr[j].assessment = 0;
                     counter++;
                 }
             }
         }
         System.out.println(counter);
+        System.out.println();
+
+        /**11. Поменять минимальную и максимальную оценки в массиве обьектов местами.
+         12. Вывести в консоль половину оценок массива обьектов, среднеарифметическое оценок которых является наибольшим.
+         13. Найти индексы положительных оценок(которые > 8) и сумму негативных оценок(которые < 8) в массиве обьектов.
+         14. Вывести на печать все оценки обьектов с индексом меньше шести включительно.
+         15. Поменять местами две наибольшие оценки с первой и последней оценками в массивеобьектов.
+         16. Вывести на экран оценки массива обьектов, которые расположены до минимальной оценки обьекта в массиве.
+         17. Найти сумму всех оценок находящихся между минимальной и максимальной оценками в массиве обьектов.
+         18. Вывести в консоль половину массива в которой находиться наименьшая оценка обьекта.
+         19. Написать метод, который перемещает в конец массива все элементы, значения которых находится в отрезке [3,8].
+         */
+        //----------11. Поменять минимальную и максимальную оценки в массиве обьектов местами.
+
     }
 }
