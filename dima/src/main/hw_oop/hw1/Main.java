@@ -44,7 +44,7 @@ public static void main(String[] args){
     System.out.println("5----------------------в вторая половина в обратном----------------------");
     //printArray(studentsArray,studentsArray.length, studentsArray.length/2);
 
-    System.out.println("6,7,8-------------Сумма-----мин макс середне----------------------");
+    System.out.println("6,7,8-------------Сумма-----мин макс середне-----99--------------------");
 
     int min=studentsArray[0].mark;
     int max=studentsArray[0].mark;
