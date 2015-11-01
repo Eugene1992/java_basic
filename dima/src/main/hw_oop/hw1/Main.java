@@ -37,7 +37,7 @@ public static void main(String[] args){
     }
     System.out.println("4----------------------в певая половина---------------------------------");
     printArray(studentsArray,0, studentsArray.length/2);
-    System.out.println("4----------------------в вторая половина---------------------------------");
+    System.out.println("4----------------------в вторая половина---cvcvcvcv------------------------------");
     printArray(studentsArray,studentsArray.length/2,studentsArray.length);
     System.out.println("5----------------------в певая половина в обратном ----------------------");
     printArray(studentsArray,studentsArray.length/2,0);
