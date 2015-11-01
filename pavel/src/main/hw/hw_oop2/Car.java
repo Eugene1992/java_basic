@@ -10,7 +10,9 @@ public class Car {
         this.Port = Port;
     }
 
-    public String getPort(String Port) {
+    public String getPort() {
         return Port;
     }
+
+
 }
