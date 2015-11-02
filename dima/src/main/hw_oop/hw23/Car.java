@@ -5,6 +5,10 @@ package hw23;
  */
 public class Car extends Vehicle {
 
+    public Car(int x, int y, float price, int speed, int yer) {
+        super(x, y, price, speed, yer);
+    }
+
     @Override
     public String toString() {
 

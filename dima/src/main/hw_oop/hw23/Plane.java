@@ -7,6 +7,12 @@ public class Plane extends Vehicle {
     private int height;
     private int quantity;
 
+    public Plane(int x, int y, float price, int speed, int yer, int height, int quantity) {
+        super(x, y, price, speed, yer);
+        this.height = height;
+        this.quantity = quantity;
+    }
+
     public void setHeight(int height) {
         this.height = height;
     }

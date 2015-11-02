@@ -7,6 +7,14 @@ public class Ship extends Vehicle {
     private int quantity;
     private String port;
 
+    public Ship(int x, int y, float price, int speed, int yer, int quantity, String port) {
+        super(x, y, price, speed, yer);
+        this.quantity = quantity;
+        this.port = port;
+
+    }
+
+
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }

@@ -10,6 +10,14 @@ public class Vehicle {
     private int speed;
     private int yer;
 
+    public Vehicle(int x, int y, float price, int speed, int yer) {
+        this.x = x;
+        this.y = y;
+        this.price = price;
+        this.speed = speed;
+        this.yer = yer;
+    }
+
     public int getSpeed() {
         return speed;
     }
