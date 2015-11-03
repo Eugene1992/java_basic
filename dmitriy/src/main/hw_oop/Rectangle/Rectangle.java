@@ -1,7 +1,5 @@
 package Rectangle;
 
-import java.util.Scanner;
-
 public class Rectangle {
 
     private double side1;
@@ -17,17 +15,16 @@ public class Rectangle {
     public void setSide1(double newSide1){side1 = newSide1;}
     public void setSide2(double newSide2){side2 = newSide2;}
 
-    public Rectangle(double side1, double side2){
+    public Rectangle(){
         this.side1 = side1;
         this.side2 = side2;
     }
-
-    public double areaCalculator(double side1, double side2){
-        double area = side1 * side2;
+    public double areaCalculator (double getSide1, double getSide2){
+        double area = getSide1 * getSide2;
         return area;
     }
-    public double perimeterCalculator (double side1, double side2){
-        double perimeter = 2 * (side1 + side2);
+    public double perimeterCalculator (double getSide1, double getSide2){
+        double perimeter = 2 * (getSide1 + getSide2);
         return perimeter;
     }
 }
