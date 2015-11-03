@@ -6,6 +6,6 @@ public class Car extends Vehicle {
         super(name, price,speed, year);
     }
     public String toString() {
-        return "Name - " + getName() + " " + " Price - " + getPrise() + " " + " Speed - " + getSpeed() + " " + " Year - " + getYear();
+        return "Name - " + super.getName() + " " + " Price - " + super.getPrise() + " " + " Speed - " + super.getSpeed() + " " + " Year - " + super.getYear();
     }
 }
