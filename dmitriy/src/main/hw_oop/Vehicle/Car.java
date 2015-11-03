@@ -26,5 +26,4 @@ public class Car extends Vehicle {
     public String toString() {
         return "Name - " + name + " " + " Price - " + price + " " + " Speed - " + speed + " " + " Year - " + year;
     }
-
 }

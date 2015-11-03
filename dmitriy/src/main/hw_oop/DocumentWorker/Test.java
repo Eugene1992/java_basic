@@ -1,4 +1,4 @@
-package Four;
+package DocumentWorker;
 
 import java.util.Scanner;
 

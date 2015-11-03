@@ -16,7 +16,5 @@ public class Test {
         for (Vehicle masVehicle : vehicle){
             System.out.println(masVehicle.toString());
         }
-
-
     }
 }

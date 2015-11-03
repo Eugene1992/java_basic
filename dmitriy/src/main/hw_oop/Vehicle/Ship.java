@@ -15,7 +15,7 @@ public class Ship extends Vehicle{
     public void setPassengers(int newPassengers){passengers = newPassengers;}
     public void setPort(String newPort){port = newPort;}
 
-    public Ship(String name,int price, int speed, int year,int passengers, String port) {
+    public Ship(String name, int price, int speed, int year, int passengers, String port) {
         this.name = name;
         this.price = price;
         this.speed = speed;
@@ -26,5 +26,4 @@ public class Ship extends Vehicle{
     public String toString() {
         return "Name - " + name + " " + " Price - " + price + " " + " Speed - " + speed + " " + " Year - " + year + " Passengers - " + passengers + " Port - " + port;
     }
-
 }

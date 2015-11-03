@@ -14,7 +14,7 @@ public class Plane extends Vehicle{
     public void setHeight(int newHeight){height = newHeight;}
     public void setPassengers(int newPassengers){passengers = newPassengers;}
 
-    public Plane(String name,int price, int speed, int year, int height, int passengers) {
+    public Plane(String name, int price, int speed, int year, int height, int passengers) {
         this.name = name;
         this.price = price;
         this.speed = speed;

@@ -1,4 +1,4 @@
-package Two.Task1;
+package Pupil;
 
 public class Pupil {
     void stud() {

@@ -16,8 +16,6 @@ public class Vehicle {
     public void setPrice(int newPrice){price = newPrice;}
     public void setSpeed(int newSpeed){speed = newSpeed;}
     public void setYear(int newYear){year = newYear;}
-
-
 }
 
 

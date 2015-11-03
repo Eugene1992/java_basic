@@ -1,9 +1,9 @@
-package Four;
+package DocumentWorker;
 
 public class ExpertDokumentWorker extends ProDokumentWorker{
 
     void saveDocument(){
-        System.out.println("Save");
+        System.out.println("The document is stored in a new format");
     }
 
 }
