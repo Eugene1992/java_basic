@@ -1,4 +1,4 @@
-package Task3;
+package Vehicle;
 
 public class Ship extends Vehicle{
 

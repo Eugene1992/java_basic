@@ -1,6 +1,6 @@
-package Task3;
+package Vehicle;
 
-public class Car extends Vehicle {
+public class Vehicle {
 
     private String name;
     private int price;
@@ -17,14 +17,7 @@ public class Car extends Vehicle {
     public void setSpeed(int newSpeed){speed = newSpeed;}
     public void setYear(int newYear){year = newYear;}
 
-    public Car(String name, int price, int speed, int year) {
-        this.name = name;
-        this.price = price;
-        this.speed = speed;
-        this.year = year;
-    }
-    public String toString() {
-        return "Name - " + name + " " + " Price - " + price + " " + " Speed - " + speed + " " + " Year - " + year;
-    }
 
 }
+
+

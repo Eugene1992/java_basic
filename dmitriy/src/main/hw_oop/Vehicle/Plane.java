@@ -1,4 +1,4 @@
-package Task3;
+package Vehicle;
 
 public class Plane extends Vehicle{
     private String name;

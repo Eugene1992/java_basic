@@ -1,4 +1,4 @@
-package Task3;
+package Vehicle;
 
 public class Test {
     public static void main(String[] Args){
