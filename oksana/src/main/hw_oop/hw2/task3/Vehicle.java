@@ -6,63 +6,34 @@ package hw2.task3;
 public class Vehicle {
 
     private int price;
+    private int speed;
+    public int year;
 
-    public void setPrice(int price) {
+    public Vehicle(int price, int speed, int year) {
         this.price = price;
+        this.speed = speed;
+        this.year = year;
     }
-
-    public int getPrice() {
+    public int getPrise() {
         return price;
     }
-
-    public int speed;
-
-    public void setSpeed(int speed) {
-        this.speed = speed;
+    public void setPrice(int newPrice){
+        price = newPrice;
     }
-
     public int getSpeed() {
         return speed;
     }
-
-    public int year;
-
-    public void setYear(int year) {
-        this.year = year;
+    public void setSpeed(int newSpeed){
+        speed = newSpeed;
     }
-
     public int getYear() {
         return year;
     }
-
-    public int passegers;
-
-    public void setPassegers(int passegers) {
-        this.passegers = passegers;
+    public void setYear(int newYear){
+        year = newYear;
     }
 
-    public int getPassegers() {
-        return passegers;
-    }
 
-    public int port;
 
-    public void setPort(int port) {
-        this.port = port;
-    }
-
-    public int getPort() {
-        return port;
-    }
-
-    public int hight;
-
-    public void setHight(int hight) {
-        this.hight = hight;
-    }
-
-    public int getHight() {
-        return hight;
-    }
 
 }
