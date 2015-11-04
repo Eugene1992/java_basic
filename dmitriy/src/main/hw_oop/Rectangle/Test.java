@@ -11,7 +11,6 @@ public class Test {
         Scanner scanner = new Scanner(System.in);
         rectangle.setSide1(Double.parseDouble(scanner.next()));
 
-
         System.out.print("Please, enter the second side of the rectangle - ");
         rectangle.setSide2(Double.parseDouble(scanner.next()));
 

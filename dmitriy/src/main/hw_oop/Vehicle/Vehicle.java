@@ -13,7 +13,7 @@ public class Vehicle {
         this.speed = speed;
         this.year = year;
     }
-        public String getName(){return name;}
+        public String getName() {return name;}
         public int getPrise() {return price;}
         public int getSpeed() {return speed;}
         public int getYear() {return year;}

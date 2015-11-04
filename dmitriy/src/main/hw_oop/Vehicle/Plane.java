@@ -17,6 +17,6 @@ public class Plane extends Vehicle{
         public void setPassengers(int newPassengers){passengers = newPassengers;}
 
     public String toString() {
-        return "Name - " + getName() + " " + " Price - " + getPrise() + " " + " Speed - " + getSpeed() + " " + " Year - " + getYear() + " Height - " + getHeight() + " Passengers - " + getPassengers();
+        return "Name - " + super.getName() + " " + " Price - " + super.getPrise() + " " + " Speed - " + super.getSpeed() + " " + " Year - " + super.getYear() + " Height - " + getHeight() + " Passengers - " + getPassengers();
     }
 }
