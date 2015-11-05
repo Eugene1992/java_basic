@@ -1,9 +1,5 @@
 package hw3;
-
-import com.sun.org.apache.xerces.internal.util.SynchronizedSymbolTable;
-
 import java.util.Scanner;
-
 /**
  * Задание 7
  *Используя IntelliJ IDEA, создайте класс Calculator.
@@ -22,11 +18,11 @@ public class Calculator {
 
         Scanner myScanner = new Scanner(System.in);
         System.out.println("Вас вітає калькулятор введіть будьласка перше число");
-
         double operant1 = myScanner.nextDouble();
-        System.out.println("Введіть друге число");
 
+        System.out.println("Введіть друге число");
         double operant2 = myScanner.nextDouble();
+
         System.out.println("Введіть одну з дій (  + ;  - ;  * ;  / )");
         String s = myScanner.next();
 

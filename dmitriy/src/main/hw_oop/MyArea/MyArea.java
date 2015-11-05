@@ -10,12 +10,11 @@ import com.sun.corba.se.impl.interceptors.PICurrent;
 **/
 public class MyArea {
 
-    final static double pi = 3.14;
-
-    public static double getPi(){return pi;}
+    final static double PI = 3.14;
+    String name;
 
     public static double areaOfCircle(double r){
-        double s = (double) getPi() * (Math.pow(r,2));
+        double s = (double) PI * (Math.pow(r,2));
         return s;
     }
 }

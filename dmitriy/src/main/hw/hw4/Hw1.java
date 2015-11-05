@@ -1,5 +1,4 @@
 package hw4;
-
 /**
  * -------------------------------------------------- Последовательности --------------------------------------------------
  *1. Создайте программу, выводящую на экран все четырёхзначные числа последовательности 1000 1003 1006 1009 1012 1015 ….
@@ -11,45 +10,53 @@ package hw4;
  */
 public class Hw1 {
     public static void main(String[] args) {
+
         System.out.println("Task 1");
+
         int a = 1000;
         while (a < 10000) {
-
             System.out.println("a = " + a);
             a = a + 3;
         }
+
         System.out.println("Task 2");
-        int b = 1;
-        int c = 1;
+
+        int b = 1, c = 1;
 
         while (b <= 55) {
             System.out.println(b + " - " + c);
             b++;
             c += 2;
         }
+
         System.out.println("Task 3");
 
         b = 90;
+
         while (b >= 0) {
             System.out.println("b = " + b);
             b -= 5;
         }
+
         System.out.println("Task 4");
 
         a = 2;
         b = 1;
+
         while (b <= 20) {
             System.out.println(b + " - " + a);
             a *= 2;
             b++;
-
         }
+
         System.out.println("Task 5");
 
-        int n = 20;
-        int f = 1, d = 1;
+        int n = 20,f = 1, d = 1;
+
         System.out.print(f + " " + d);
+
         int fib = 2, i = 2;
+
         while (i < n) {
             fib = f + d;
             f = d;

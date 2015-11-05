@@ -18,6 +18,4 @@ public class ArithmeticAverage {
 
         System.out.print(midle);
     }
-
-
 }

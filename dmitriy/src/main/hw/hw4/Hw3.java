@@ -1,5 +1,4 @@
 package hw4;
-
 /**
  * ----------------------------------------------------- Творчество -------------------------------------------------------
  В этом блоке задач используйте минимальный вывод в строку, то есть "Ж " или "- ", а не целыми строками
@@ -60,6 +59,7 @@ package hw4;
  */
 public class Hw3 {
     public static void main(String[] args) {
+
         char a = 'Ж';
         char b = '-';
         byte counter = 1; // щечик стовпків ж
@@ -67,12 +67,9 @@ public class Hw3 {
         byte counter3 = 1; // щечик рядків
 
         while (counter3 <= 16) {
-
             if (counter3 % 2 == 0) {
                 if (counter2 <= 4) {
-
                     if (counter <= 8) {
-
                         if (counter <= 4) {
                             System.out.print(b);
                             ++counter;
@@ -92,9 +89,7 @@ public class Hw3 {
                 }
             } else {
                 if (counter2 <= 4) {
-
                     if (counter <= 8) {
-
                         if (counter <= 4) {
                             System.out.print(a);
                             ++counter;
@@ -114,7 +109,6 @@ public class Hw3 {
                 }
             }
         }
-
     }
 }
 

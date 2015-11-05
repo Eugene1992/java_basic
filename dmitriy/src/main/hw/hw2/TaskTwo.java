@@ -10,11 +10,13 @@ d приняла знвчение 7.0
 */
 public class TaskTwo {
     public static void main(String[] args) {
+
         int a = 263;
         int b = 5;
         int c = 4;
         int e = 2;
         double d = (byte)a + b/c/e;
+
         System.out.println(d);
     }
 }

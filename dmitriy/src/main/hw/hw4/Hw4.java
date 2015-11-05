@@ -1,5 +1,4 @@
 package hw4;
-
 /**
  * 8. Вывести в консоль швейцарский флаг произвольных размеров. Например:
  Ж Ж Ж Ж Ж Ж Ж Ж Ж Ж Ж Ж Ж Ж Ж Ж Ж Ж Ж Ж Ж Ж Ж Ж Ж Ж Ж Ж Ж Ж Ж Ж Ж Ж Ж Ж
@@ -30,7 +29,6 @@ public class Hw4 {
         int counter3 = 1;
 
         while (counter2 <= 16) { // рядки
-
             if (counter2 <= 2) {
                 for (int i = 1; i <= 32; i++) {
                     System.out.print(a);
