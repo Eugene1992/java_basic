@@ -3,7 +3,7 @@ package hw_oop2;
 /**
  * Created by ppota on 10/31/2015.
  */
-public class Plane {
+public class Plane extends Vehicle {
 
         int High;
         int Pass;

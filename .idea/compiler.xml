@@ -19,7 +19,7 @@
       </profile>
       <profile default="false" name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="dima" />
@@ -32,12 +32,13 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
-      <module name="dmitriy" target="1.7" />
-      <module name="examples" target="1.7" />
-      <module name="java_starter" target="1.7" />
-      <module name="oksana" target="1.7" />
+      <module name="dima" target="1.5" />
+      <module name="dmitriy" target="1.5" />
+      <module name="examples" target="1.5" />
+      <module name="java_starter" target="1.5" />
+      <module name="oksana" target="1.5" />
       <module name="pavel" target="1.8" />
-      <module name="sergey" target="1.7" />
+      <module name="sergey" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
