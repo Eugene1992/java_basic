@@ -9,16 +9,16 @@ package AbstractHandler;
     *быть методы открытия, создания, редактирования, сохранения определенного формата документа.
     */
 public class AbstractHandler {
-        void Open(){
+        void open(){
             System.out.println();
         }
-        void Create(){
+        void create(){
             System.out.println();
         }
-        void Change(){
+        void change(){
             System.out.println();
         }
-        void Save(){
+        void save(){
             System.out.println();
         }
 }

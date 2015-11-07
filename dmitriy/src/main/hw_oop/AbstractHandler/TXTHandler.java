@@ -2,24 +2,22 @@ package AbstractHandler;
 
 public class TXTHandler extends AbstractHandler {
     @Override
-    void Open() {
-        super.Open(); System.out.println("TXT document is opened.");
+    void open() {
+        System.out.println("TXT document is opened.");
     }
 
     @Override
-    void Create() {
-        super.Create(); System.out.println("TXT document is created.");
+    void create() {
+        System.out.println("TXT document is created.");
     }
 
     @Override
-    void Change() {
-        super.Change();
+    void change() {
         System.out.println("TXT document is changed.");
     }
 
     @Override
-    void Save() {
-        super.Save();
+    void save() {
         System.out.println("TXT document is saved.");
     }
 }

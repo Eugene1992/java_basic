@@ -2,24 +2,22 @@ package AbstractHandler;
 
 public class XMLHandler extends AbstractHandler{
     @Override
-    void Open() {
-        super.Open(); System.out.println("XML document is opened.");
+    void open() {
+        System.out.println("XML document is opened.");
     }
 
     @Override
-    void Create() {
-        super.Create(); System.out.println("XML document is created.");
+    void create() {
+        System.out.println("XML document is created.");
     }
 
     @Override
-    void Change() {
-        super.Change();
-        System.out.println("XML document is changed.");
+    void change() {
+       System.out.println("XML document is changed.");
     }
 
     @Override
-    void Save() {
-        super.Save();
+    void save() {
         System.out.println("XML document is saved.");
     }
 }
