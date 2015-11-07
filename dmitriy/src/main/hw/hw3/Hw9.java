@@ -26,4 +26,3 @@ public class Hw9 {
             } else {System.out.println("Уравнение не имеет квадратных корней");}
         }
     }
-}

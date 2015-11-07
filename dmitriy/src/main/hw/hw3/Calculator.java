@@ -23,24 +23,24 @@ public class Calculator {
         System.out.println("Введіть друге число");
         double operant2 = myScanner.nextDouble();
 
-        System.out.println("Введіть одну з дій (  + ;  - ;  * ;  / )");
-        String s = myScanner.next();
+        System.out.println("Введіть номер однієї з дій (  1 - (+) ; 2 - (-); 3 -  (*) ; 4 -  (/) )");
+        byte s = myScanner.nextByte();
 
         switch(s) {
 
-            case "+":
+            case 1:
                 double sum = operant1 + operant2;
                 System.out.println("Сумма двох значень" + operant1 + " і " + operant2 + " дорівнює = " + sum);
                 break;
-            case "-":
+            case 2:
                 double difference = operant1 - operant2;
                 System.out.println("Різниця двох значень" + operant1 + " і " + operant2 + " дорівнює = " + difference);
                 break;
-            case "*":
+            case 3:
                 double multiplication = operant1 * operant2;
                 System.out.println("Наслідок множення двох значень" + operant1 + " і " + operant2 + " дорівнює = " + multiplication);
                 break;
-            case "/":
+            case 4:
                 double division = operant1 / operant2;
                 if (division == 0) {
                     System.out.println("Наслідком діленняна о буде" + operant1);
