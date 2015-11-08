@@ -96,7 +96,7 @@ public class Sound {
         }
     }
 
-    //Статический метод, для удобства
+    //Статический метод, для удобства/
     public static Sound playSound(String s) {
         File f = new File(s);
         Sound snd = new Sound(f);
