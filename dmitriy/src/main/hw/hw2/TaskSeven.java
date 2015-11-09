@@ -1,5 +1,4 @@
 package hw2;
-
 /* Задание:
 1. Проанализировать код программы.
 2. Запустить ее и посмотреть какое значение принимает переменная c.
@@ -10,9 +9,11 @@ package hw2;
 */
 public class TaskSeven {
     public static void main(String[] args) {
+
         int a = (byte)44;
         int b = (int)300;
         short c =  (short)(b - a);
+
         System.out.println(c);
     }
 }

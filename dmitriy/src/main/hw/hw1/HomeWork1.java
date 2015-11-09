@@ -1,5 +1,4 @@
 package hw1;
-
 /**
   *1. Создать четыре целочисленные переменные типов byte, short, int, long.
  * 2. Инициализировать переменную типа byte результатом суммы двух любых чисел
@@ -51,7 +50,9 @@ public class HomeWork1{
         byte w = (byte) ((byte) (b + b) / a);
 
         System.out.println(w);
+
         // 8. Переменной типа int передать результат деления двух short, умноженных на результат деления двух byte
+
         int q = (b / b) * (a / a);
 
         System.out.println(q);
@@ -65,6 +66,7 @@ public class HomeWork1{
         k = g;
         g = n;
         n = k;
+
         System.out.println("k =  " + k);
         System.out.println("g = " + g);
         System.out.println("n = " + n);
@@ -72,6 +74,7 @@ public class HomeWork1{
         System.out.println();
 
         //10. Поменять значения двух переменных без использования третей
+
         g = 6;
         n = 8;
 
@@ -85,7 +88,6 @@ public class HomeWork1{
 
         System.out.println("g = " + g);
         System.out.println("n = " + n);
-
         System.out.println("Tesk 11:");
 
         /**Дано число от 0 до 255 в десятичной системе исчисления. Написать программу, которая переводит данное число в двоичную

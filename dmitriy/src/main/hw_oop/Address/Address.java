@@ -9,36 +9,28 @@ public class Address {
     private int house;
     private int apartment;
 
-
-    //public method to get the age variable//getter
+    //getter
 
     public int getIndex() {
         return index;
     }
-
     public String getCountry() {
         return country;
     }
-
     public String getCity() {
         return city;
     }
-
     public String getStreet() {
         return street;
     }
-
     public int getHouse() {
         return house;
     }
-
     public int getApartment() {
         return apartment;
     }
 
-
-//setter
-
+    //setter
 
     public void setIndex(int newIndex){
         index = newIndex;

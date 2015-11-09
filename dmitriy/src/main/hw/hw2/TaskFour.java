@@ -1,5 +1,4 @@
 package hw2;
-
 /* Задание:
 1. Проанализировать код программы. Прогуглить, что означает запись "1e-3".
 2. Запустить ее и посмотреть какое значение принимает переменная d.
@@ -10,10 +9,12 @@ d приняла знвчение 3.765
 */
 public class TaskFour {
     public static void main(String[] args) {
+
         int a = 15;
         int b = 4;
         float c = (float)a / b;
         double d = a * 1e-3 + c;
+
         System.out.println(d);
     }
 }
