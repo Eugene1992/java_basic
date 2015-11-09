@@ -6,7 +6,7 @@ package hw52;
 public class Main52 {
     public static void main(String[] args){
 
-        Zoo.add(1, new Zoo("Волк","Волк"));
+        Zoo.add(0, new Zoo("Волк","Волк"));
         Zoo.add(2, new Zoo("Волк1","1Волк"));
         Zoo.add(3, new Zoo("Волк2","2Волк"));
         Zoo.add(4, new Zoo("Волк3","3Волк"));
