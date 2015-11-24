@@ -19,8 +19,7 @@ public class Student {
         this.sername = sername;
         this.mark = mark;
     }
-    public String toString(){
-        return sername + " " + name + " отримає оцінку " +mark;
+    public String toString(){return sername + " " + name + " отримає оцінку " +mark;
     }
 
 
