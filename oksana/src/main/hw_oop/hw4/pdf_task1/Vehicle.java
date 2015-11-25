@@ -8,7 +8,6 @@ public class Vehicle {
     class Wheel{
         Vehicle.Wheel print = new Wheel();
 
-
     }
     class Door{
         Vehicle.Door print = new Door();

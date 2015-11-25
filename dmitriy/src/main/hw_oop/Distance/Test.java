@@ -14,12 +14,13 @@ public class Test {
     public static void main(String[] args) {
 
         Distance dis = new Distance();
+        Distance.Convert convert = new Distance.Convert();
 
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Enter the number - ");
 
-        dis.setDistanse(sc.nextDouble());
+        dis.setDistance(sc.nextDouble());
 
         System.out.println("Select translation:");
         System.out.println("1 - Milimetr to Santimetr");
@@ -36,7 +37,29 @@ public class Test {
         int numb = sc.nextInt();
 
         switch (numb){
-            case 1: Distance.print(dis.getDistanse());
+            case 1: dis.print(convert.mmToCm(dis.getDistance()));
+                break;
+            case 2: dis.print(convert.cmTomm(dis.getDistance()));
+                break;
+            case 3: dis.print(convert.cmTom(dis.getDistance()));
+                break;
+            case 4: dis.print(convert.mmToCm(dis.getDistance()));
+                break;
+            case 5: dis.print(convert.cmToDm(dis.getDistance()));
+                break;
+            case 6: dis.print(convert.dmToCm(dis.getDistance()));
+                break;
+            case 7: dis.print(convert.metrToKilometr(dis.getDistance()));
+                break;
+            case 8: dis.print(convert.KilometrToMetr(dis.getDistance()));
+                break;
+            case 9: dis.print(convert.KilometrToMili(dis.getDistance()));
+                break;
+            case 10: dis.print(convert.MiliToKilometr(dis.getDistance()));
+                break;
+            default:
+                System.out.println("Erore!");
+                break;
         }
     }
 }

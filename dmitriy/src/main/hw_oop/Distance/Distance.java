@@ -9,18 +9,18 @@ package Distance;
  */
 public class Distance {
 
-    private static double distanse = 10;
+    private static double distance;
 
-    public void setDistanse(double number){distanse = number;}
-    public double getDistanse(){return distanse;}
+    public void setDistance(double number){distance = number;}
+    public double getDistance(){return distance;}
 
     public static void print(double dis) {
         System.out.println(dis);
     }
 
     static class Convert {
-        double mmToCm(double dis) {
-            return dis / 10;
+        double mmToCm(double distance) {
+            return distance / 10;
         }
 
         double cmTomm(double distance) {
@@ -47,16 +47,16 @@ public class Distance {
             return distance * 1000;
         }
 
-        double KilometrToMetr(double distanse) {
-            return distanse / 1000;
+        double KilometrToMetr(double distance) {
+            return distance / 1000;
         }
 
-        double KilometrToMili(double distanse) {
-            return distanse / 0.62137119223733;
+        double KilometrToMili(double distance) {
+            return distance / 0.62137119223733;
         }
 
-        double MiliToKilometr(double distanse) {
-            return distanse * 0.62137119223733;
+        double MiliToKilometr(double distance) {
+            return distance * 0.62137119223733;
         }
     }
 }

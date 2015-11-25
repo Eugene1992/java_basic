@@ -11,27 +11,28 @@ import java.util.ArrayList;
 public class Zoo {
     public static void main(String[] args) {
 
-        ArrayList arrayList = new ArrayList(8);
+        ArrayList<String> arrayList = new ArrayList<>();
 
-        arrayList.add(0, "Cat");
-        arrayList.add(1, "Dog");
-        arrayList.add(2, "Cow");
-        arrayList.add(3, "Mouse");
-        arrayList.add(4, "Pig");
-        arrayList.add(5, "Lion");
-        arrayList.add(6, "Hipo");
-        arrayList.add(7, "Tiger");
+        arrayList.add("Cat");
+        arrayList.add("Dog");
+        arrayList.add("Cow");
+        arrayList.add("Mouse");
+        arrayList.add("Pig");
+        arrayList.add("Lion");
+        arrayList.add("Hipo");
+        arrayList.add("Tiger");
 
         System.out.println("Task 1 - " + arrayList);
+        System.out.println();
 
         /*Задание 3
         * Используя Intelij IDEA создать проект, пакет.
         * Используя класс ListTask Задания 2, удалить 3, 5, 7 животные, узнать размер списка и вывести в консоль.
         **/
 
-        arrayList.remove(3);
-        arrayList.remove(5);
-        arrayList.remove(7);
+        arrayList.remove("Cow");
+        arrayList.remove("Pig");
+        arrayList.remove("Tiger");
 
         System.out.println("Task 2 - " + arrayList);
         System.out.println("Size of List is - " + arrayList.size());
