@@ -1,4 +1,6 @@
 package Worker;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Scanner;
 
 /**
@@ -19,7 +21,7 @@ public class Test {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        Worker arr[] = new Worker[5];
+        final Worker arr[] = new Worker[5];
 
         //Enter the arr data
 
@@ -46,28 +48,32 @@ public class Test {
 
         //Sort mass
 
-        for(int i = arr.length-1; i > 0; i--){
-            for(int j = 0; j < i; j++){
-                if( arr[j].getInitialization().equals(arr[j + 1].getInitialization())){
-                String tmp = arr[j].getInitialization();
-                arr[j].setInitialization(arr[j+1].getInitialization());
-                arr[j+1].setInitialization(tmp);
+        Arrays.sort(arr, new Comparator<Worker>() {
+
+            @Override
+            public int compare(Worker o, Worker o2) {
+                if (o.getInitialization().equals(o2.getInitialization())) {
+                    return o.getYerToStart() - o2.getYerToStart();
+
+                }else return o.getInitialization().compareTo(o2.getInitialization());
             }
-        }
+        });
 
-            //Print Mass
+        //Print Mass
 
-        for (i = 0; i < arr.length; i++){
+        for (int i = 0; i < arr.length; i++){
             System.out.println(arr[i].toPrint());
         }
 
         System.out.print("Enter the work experience - ");
-        for (i = 0; i < arr.length; i++) {
-            if (scanner.nextInt() <= arr[i].getYerToStart()){
+        int temp = scanner.nextInt();
+
+        for (int i = 0; i < arr.length; i++) {
+            if (temp <= arr[i].getYerToStart()){
                 System.out.println(arr[i].toPrint());
             }
         }
     }
 }
-}
+
 

@@ -1,0 +1,1441 @@
+Index: dmitriy/src/main/queGen/QuestionGenerator.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- dmitriy/src/main/queGen/QuestionGenerator.java	(revision )
++++ dmitriy/src/main/queGen/QuestionGenerator.java	(revision )
+@@ -0,0 +1,52 @@
++package queGen;
++
++import java.io.BufferedReader;
++import java.io.FileReader;
++import java.io.IOException;
++import java.io.InputStreamReader;
++import java.util.ArrayList;
++import java.util.Arrays;
++
++public class QuestionGenerator {
++    private final static String FILE = "C:\\JavaRush\\JavaRushHomeWork\\src\\com\\javarush\\test\\example\\queGen\\Questions.txt";
++    private static ArrayList<String> questions = new ArrayList<String>();
++    private static ArrayList<String> students = new ArrayList<String>(Arrays.asList("Оксане", "Дмитрию", "Павелу", "Сергею"));
++
++    public static void main(String[] args) throws IOException, InterruptedException {
++        BufferedReader questionReader = new BufferedReader(new FileReader(FILE));
++            while (questionReader.ready()) {
++            String s = questionReader.readLine();
++            questions.add(s);
++        }
++        BufferedReader anotherQuestionReader = new BufferedReader(new InputStreamReader(System.in));
++        System.out.println("--------------------------------------------------\n" +
++                           "--- Welcome to Random Question Generator v2.0! ---" +
++                           "\n--------------------------------------------------");
++        QuestionGenerator.makeDelay(2);
++        System.out.println("Начать работу? Yes/No?");
++        if ((anotherQuestionReader.readLine()).equals("Yes")) {}
++        else return;
++        QuestionGenerator.makeDelay(2);
++        QuestionGenerator.askQuestion();
++        while (true) {
++            System.out.println("\nЗадать еще вопросик? Yes/No?");
++            String answer = anotherQuestionReader.readLine();
++            if (answer.equals("Yes")) QuestionGenerator.askQuestion();
++            if (answer.equals("No")) {
++                System.out.println("Ученик убегает - JVM побеждает!");
++                break;
++            }
++        }
++    }
++
++    private static void askQuestion() throws InterruptedException {
++        System.out.println(students.get((int)(Math.random()*4)) + " выпадает вопрос номер " + questions.get((int)(Math.random()*56)));
++        QuestionGenerator.makeDelay(3);
++        System.out.println("Компилятор оценивает шансы на правильный ответ в " + (int)(Math.random()*100) + "%");
++        QuestionGenerator.makeDelay(5);
++    }
++
++    private static void makeDelay(int seconds) throws InterruptedException {
++        Thread.sleep(seconds*1000);
++    }
++}
+Index: dmitriy/src/main/queGen/Questions.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- dmitriy/src/main/queGen/Questions.txt	(revision )
++++ dmitriy/src/main/queGen/Questions.txt	(revision )
+@@ -0,0 +1,226 @@
++1. Что такое JDK? Для чего он нужен?
++2. Что входит в состав JDK?
++3. Что такое JRE?
++4. Для чего нужна JRE?
++5. Какой компании принадлежали права на Java и какой принадлежат на данный момент?
++6. Сколько версий имеет Java на данный момент?
++7. Что такое JVM? Для чего она нужна?
++8. Какое из утверждений верно: "JDK содержит JRE" или "JRE содержит JDK"?
++9. Опишите все этапы от написания программы в среде разработки до ее запуска на платформе?
++10. Что такое байт-код?
++11. Какой язык программирования "быстрее" - С++ или Java? Почему?
++12. Что такое высокоуровневый и низкоуровневый языки программирования? К какому из них относится Java?
++13. Что означают следующие абревиатуры: Java ME, Java SE, Java EE?
++14. Что такое компилятор? Для чего он нужен?
++15. Какое расширение имеет написанная и скомпилированная программа на Java?
++16. Что означают консольные команды java и javac?
++17. Назовите проекты, реализованые с привлечением Java (J2EE) технологий?
++18. Назовите преимущества Java, как языка программирования?
++19. Кто является основателем, разработчиком и главным идеологом архитектуры Java?
++20. Обьясните лозунг Java "Write once - run everywhere!"?
++21. Что такое бит? Какие состояния он имеет?
++22. Сколько команд можно представить с помощью трех бит?
++23. Сколько комбинаций(команд) можно представить с помощью пяти бит?
++24. Сколько бит содержит один байт?
++25. Сколько байт содержит один Мегабайт?
++26. Какие единицы измерения количества информации вы знаете?
++27. Каким образом процессор взаимодействует с оперативной памятью?
++28. Что такое "машинное слово"?
++29. Как вы понимаете термин "система исчисления"?
++30. Как вы понимаете термин "основание системы исчисления"?
++31. Какой префикс используется для записи числа в 16-ой системе исчисления?
++32. Какой префикс используется для записи числа в 8-ой системе исчисления?
++33. Переведите число 17 из 10-ой в 2-ую систему исчисления.
++34. Переведите число 27 из 10-ой в 8-ую систему исчисления.
++35. Переведите число 57 из 10-ой в 16-ую систему исчисления.
++36. Переведите число 10110 из 2-ой в 10-ую систему исчисления.
++37. Переведите число 25 из 8-ой в 10-ую систему исчисления.
++38. Переведите число 2А из 16-ой в 10-ую систему исчисления.
++39. Что такое переменная?
++40. Что необходимо указать при создании переменной?
++41. Что означает инциализация переменной?
++42. Какие типы данных существуют в Java?
++43. Каково количество примитивных типов в Java?
++44. Нарисуйте класификацию примитивных типов Java?
++45. Какие значения может принимать тип boolean?
++46. Может ли тип char принимать отрицательные значения?
++47. Назовите способы инциализации переменной char?
++48. Какое количество памяти занимает переменная примитивного типа byte?
++49. Какое количество памяти занимает переменная примитивного типа short?
++50. Какое количество памяти занимает переменная примитивного типа int?
++51. Какое количество памяти занимает переменная примитивного типа long?
++52. Какое количество памяти занимает переменная примитивного типа float?
++53. Какое количество памяти занимает переменная примитивного типа double?
++54. Какое количество памяти занимает переменная примитивного типа char?
++55. Какой диапазон величин может принимать переменная примитивного типа byte?
++56. Какой диапазон величин может принимать переменная примитивного типа short?
++57. Какой диапазон величин может принимать переменная примитивного типа int?
++58. Какой диапазон величин может принимать переменная примитивного типа char?
++55. Какие примитивные типы называют "типами с плавающей запятой"?
++56. Что такое безопасное и небезопасное приведение примитивных типов?
++57. Что такое Code Conventions?
++58. Какие символы недопустимы в первом символе названия переменной и какие в последующих символах? Какие допустимы?
++59. Допустимо ли использование цифр, как первых символов, при именовании переменных?
++60. Чувствителен ли Java язык к регистру при наименовании переменных?
++61. Что вы знаете о Camel casing?
++62. С какого регистра стоит называть переменные в Java? Пакеты? Метолы? Названия классов? Константы?
++63. Что понимают под ключевыми словами в Java? Можно ли их использовать в качестве названий переменных?
++64. Что такое GIT? Зачем он нужен? Какие возможности он предоставляет разработчику?
++65. Что такое commit? Что такое репозиторий?
++66. Какие системы контроля версий вы знаете?
++67. Чем отличаеться метод System.out.print() от System.out.println()? Можно ли вызвать System.out.print() без параметров?
++68. Что такое public static void main(String[] args)? Что означает каждое из слов этого метода?
++69. Что такое "классы ообертки"? Почему они так называются, какую функцию выполняют?
++70. Что означает ключевое слово final в Java? К чему оно применимо?
++71. Что такое константа? Какой модификатор(ключевое слово) используется для определения констант в Java? В каком регистре именуют константы?
++72. Приведите примеры констант из стандартных библиотек Java?
++//03
++73. Что такое переменная?
++74. Где и для чего используются переменные?
++75. Назовите основные типы данных.
++76. Какие типы данных подходят для хранения значений чисел с плавающей запятой?
++77. В каком формате должны задаваться значения для строковых переменных?
++78. Что такое константа?
++79. В каких случаях используются константы?
++80. Что такое преобразование значений типов (Casting)?
++81. Какие существуют правила использования преобразования значений при работе с константами?
++82. В чем разница явного и неявного преобразования значения типа?
++83. Что такое конкатенация?
++84. Что такое переполнение и как его контролировать в программах?
++85. Что такое инкремент и декремент?
++86. Какие ограничения применяются к неинициализированным локальным переменным?
++87. Можно ли использовать в операциях сравнения, два значения разных типов данных?
++88. Что такое неявно типизированная локальная переменная?
++//04
++89. Обязательно ли оператор if должен использоваться вместе с оператором else?
++90. Обязательно ли создавать блок default в переключателе switch?
++91. Допустимо ли вложение тернарных операторов?
++92. Значения какого типа можно передавать в качестве параметра if()?
++93. Обязательно ли в переключателе switch-case использовать оператор перехода break?
++94. Может ли switch-case иметь только блок default?
++95. Что такое техника проваливания в операторе switch-case?
++//05
++96. Назовите основные логические функции.
++97. Расскажите таблицу истинности конъюнкции.
++98. Расскажите таблицу истинности дизъюнкции.
++99. Расскажите таблицу истинности исключающего ИЛИ.
++100. Где и для чего используются логические операции?
++101. Где и для чего используются побитовые логические операции?
++102. Где и для чего используются сдвиги?
++103. Что такое короткозамкнутые вычисления?
++104. Какие вы знаете короткозамкнутые вычисления?
++105. Дайте определение теорем Де Моргана.
++//06
++106. Что такое цикл?
++107. Перечислите известные Вам циклические конструкции.
++108. Где и для чего используются циклические конструкции?
++109. Значения, какого типа можно передавать в качестве параметра while()?
++110. Что такое итерация?
++111. В чем разница между циклом while и do-while?
++112. Для чего используются служебные слова continue и break?
++113. Что такое цикл Дейкстры?
++114. В чем отличие цикла «Паук» от цикла Дейкстры?
++115. Какой цикл предпочтительней использовать для расчета факториала?
++116. Назовите конструкцию пропуска итерации.
++117. Что такое цикл с выходом из середины и как его организовать?
++//7
++118. Что такое метод?
++119. Чем отличаются функции и процедуры?
++120. Что делает оператор return?
++121. Что такое сигнатура метода?
++122. Что такое семантика метода?
++123. Что такое метод предикат?
++124. Какие правила именования применимы к методам?
++//8
++125. Что такое метод?
++126. Чем отличаются функции и процедуры?
++127. Что такое перегрузка метода?
++128. Что такое рекурсия и какие виды рекурсии вы знаете?
++129. Что такое опциональные параметры?
++130. Что такое метод предикат?
++131. Какие правила именования применимы к методам?
++132. Можно ли выполнить перегрузку метода main?
++//9
++131. Что такое одномерный массив?
++132. Что такое двумерный массив?
++133. Что такое трехмерный массив?
++134. Что такое зубчатый массив?
++135. Может ли индекс превышать общее количество элементов массива?
++136. С какого числа начинают индексироваться элементы массива?
++//oop
++137. Что такое Класс?
++138. Что такое объект?
++139. Что такое экземпляр класса?
++140. Что такое ООП?
++141. Назовите основные парадигмы OOP.
++142. Что такое инкапсуляция?
++143. Какие модификаторы доступа вы знаете? Для чего они используются?
++144. Как работает память JVM.
++145. Что такое пакеты, зачем они нужны?
++146. Что такое статический импорт?
++//
++147. Что такое Конструктор?
++148. Что такое Конструктор по умолчанию, Приватный?
++149. Что значит this?
++150. Что такое перегрузка конструкторов?
++151. Как создавать конструктор из конструктора.
++152. Как применяется статика с полями?
++153. Как используется статика в методах?
++154. Перечислить где может статика использоваться.
++//
++155. Что такое наследование?
++156. Какие недостатки наследования вы знаете?
++157. Что такое модификаторы доступа и где их используют?
++158. Что такое ООП?
++159. Назовите основные парадигмы OOP.
++160. Что такое полиморфизм?
++161. Зачем используется ключевое слово virtual?
++162. Что такое Cast, Upcast, Downcast?
++163. Объясните назначение ключевого слова final?
++//
++164. Что такое абстрактный класс?
++165. Что такое интерфейс?
++166. Чем абстрактный класс отличается от интерфейса?
++167. Что такое множественное наследование?
++168. Чем абстрактный класс отличается от конкретного?
++169. Какие члены могут быть абстрактными?
++//
++170. Что такое Массив?
++171. Если в Java многомерные массивы?
++172. Можно ли изменить длину массива? А Как?
++173. Для чего нужен класс Arrays?
++174. Основные методы класса Arrays?
++175. Что такое ArrayList?
++176. Основные методы ArrayList?
++//
++177. Что такое статические члены?
++178. Что такое статический класс?
++179. Что такое вложенный класс?
++//
++180. Что такое анонимный класс?
++181. Как объявить анонимный класс?
++182. Какие ограничения имеет анонимный класс?
++183. Что такое перечислительный тип (enum)?
++184. Как создать перечислительный тип (enum)?
++//
++185. Что такое исключение?
++186. Что такое конструкция try - catch?
++187. Что такое конструкция try - catch - finally?
++188. Как создать пользовательское исключение?
++189. В каких случаях не срабатывает блок finally?
++//
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++
+Index: dmitriy/src/main/hw_oop/MyArea/Test.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- dmitriy/src/main/hw_oop/MyArea/Test.java	(revision 2e520b49d25b2d2bccd8a67f179c7947b089c2ce)
++++ dmitriy/src/main/hw_oop/MyArea/Test.java	(revision )
+@@ -10,6 +10,7 @@
+ 
+         System.out.print("Please, enter the radius of a circle whose area you want to count - ");
+         r = Double.parseDouble(sc.next());
++        
+         System.out.print("The area of circle is - " + MyArea.areaOfCircle(r));
+     }
+ }
+Index: dmitriy/src/main/hw/queGen/QuestionGenerator.java
+===================================================================
+--- dmitriy/src/main/hw/queGen/QuestionGenerator.java	(revision 2e520b49d25b2d2bccd8a67f179c7947b089c2ce)
++++ dmitriy/src/main/hw/queGen/QuestionGenerator.java	(revision 2e520b49d25b2d2bccd8a67f179c7947b089c2ce)
+@@ -1,52 +0,0 @@
+-package queGen;
+-
+-import java.io.BufferedReader;
+-import java.io.FileReader;
+-import java.io.IOException;
+-import java.io.InputStreamReader;
+-import java.util.ArrayList;
+-import java.util.Arrays;
+-
+-public class QuestionGenerator {
+-    private final static String FILE = "C:\\JavaRush\\JavaRushHomeWork\\src\\com\\javarush\\test\\example\\queGen\\Questions.txt";
+-    private static ArrayList<String> questions = new ArrayList<String>();
+-    private static ArrayList<String> students = new ArrayList<String>(Arrays.asList("Оксане", "Дмитрию", "Павелу", "Сергею"));
+-
+-    public static void main(String[] args) throws IOException, InterruptedException {
+-        BufferedReader questionReader = new BufferedReader(new FileReader(FILE));
+-            while (questionReader.ready()) {
+-            String s = questionReader.readLine();
+-            questions.add(s);
+-        }
+-        BufferedReader anotherQuestionReader = new BufferedReader(new InputStreamReader(System.in));
+-        System.out.println("--------------------------------------------------\n" +
+-                           "--- Welcome to Random Question Generator v2.0! ---" +
+-                           "\n--------------------------------------------------");
+-        QuestionGenerator.makeDelay(2);
+-        System.out.println("Начать работу? Yes/No?");
+-        if ((anotherQuestionReader.readLine()).equals("Yes")) {}
+-        else return;
+-        QuestionGenerator.makeDelay(2);
+-        QuestionGenerator.askQuestion();
+-        while (true) {
+-            System.out.println("\nЗадать еще вопросик? Yes/No?");
+-            String answer = anotherQuestionReader.readLine();
+-            if (answer.equals("Yes")) QuestionGenerator.askQuestion();
+-            if (answer.equals("No")) {
+-                System.out.println("Ученик убегает - JVM побеждает!");
+-                break;
+-            }
+-        }
+-    }
+-
+-    private static void askQuestion() throws InterruptedException {
+-        System.out.println(students.get((int)(Math.random()*4)) + " выпадает вопрос номер " + questions.get((int)(Math.random()*56)));
+-        QuestionGenerator.makeDelay(3);
+-        System.out.println("Компилятор оценивает шансы на правильный ответ в " + (int)(Math.random()*100) + "%");
+-        QuestionGenerator.makeDelay(5);
+-    }
+-
+-    private static void makeDelay(int seconds) throws InterruptedException {
+-        Thread.sleep(seconds*1000);
+-    }
+-}
+Index: dmitriy/src/main/hw_oop/Calculator/Calculator.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- dmitriy/src/main/hw_oop/Calculator/Calculator.java	(revision )
++++ dmitriy/src/main/hw_oop/Calculator/Calculator.java	(revision )
+@@ -0,0 +1,49 @@
++package Calculator;
++/**
++ * Задание
++ * Создайте проект, используя IntelliJ IDEA.
++ * Создайте класс Calculator.
++ * В теле класса создайте четыре метода для арифметических действий: (Add – сложение, Sub – вычитание,
++ * Mul – умножение, Div – деление).
++ * Метод деления должен делать проверку деления на ноль, если проверка не проходит, сгенерировать
++ * исключение.
++ * Пользователь вводит значения, над которыми хочет произвести операцию и выбрать саму операцию.
++ * При возникновении ошибок должны выбрасываться исключения.
++ */
++public class Calculator {
++
++    private double a;
++    private double b;
++    private String action;
++
++    public void setA(double a){
++        this.a = a;
++    }
++    public double getA(){
++        return a;
++    }
++    public void setB(double b) {this.b = b; }
++    public double getB() {return b; }
++    public void setAction(String action) {this.action = action; }
++    public String getAction() {return action;}
++
++    public double add(double a, double b){
++        return (double) a + b;
++    }
++    public double sub(double a, double b){
++        return (double) a - b;
++    }
++    public double mul(double a, double b){
++        return (double) a * b;
++    }
++    public double div(double a, double b){
++        try {
++            return (double) a / b;
++        }
++        catch(Exception e) {
++            System.out.println(e.getMessage());
++            System.out.println("Division by zero!");
++        }
++        return (double) a / b;
++    }
++}
+Index: dmitriy/src/main/hw_oop/ListTask/Zoo.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- dmitriy/src/main/hw_oop/ListTask/Zoo.java	(revision )
++++ dmitriy/src/main/hw_oop/ListTask/Zoo.java	(revision )
+@@ -0,0 +1,40 @@
++package ListTask;
++
++import java.util.ArrayList;
++/**
++ * Задание 2
++ * Используя Intelij IDEA создать проект, пакет.
++ * Создать класс ListTask. В классе создать список, в который записать 8 животных через метод add(index,
++ * element).
++ * Вывести список в консоль.
++ */
++public class Zoo {
++    public static void main(String[] args) {
++
++        ArrayList<String> arrayList = new ArrayList<>();
++
++        arrayList.add("Cat");
++        arrayList.add("Dog");
++        arrayList.add("Cow");
++        arrayList.add("Mouse");
++        arrayList.add("Pig");
++        arrayList.add("Lion");
++        arrayList.add("Hipo");
++        arrayList.add("Tiger");
++
++        System.out.println("Task 1 - " + arrayList);
++        System.out.println();
++
++        /*Задание 3
++        * Используя Intelij IDEA создать проект, пакет.
++        * Используя класс ListTask Задания 2, удалить 3, 5, 7 животные, узнать размер списка и вывести в консоль.
++        **/
++
++        arrayList.remove("Cow");
++        arrayList.remove("Pig");
++        arrayList.remove("Tiger");
++
++        System.out.println("Task 2 - " + arrayList);
++        System.out.println("Size of List is - " + arrayList.size());
++    }
++}
+\ No newline at end of file
+Index: oksana/src/main/hw_oop/hw4/pdf_task1/Vehicle.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- oksana/src/main/hw_oop/hw4/pdf_task1/Vehicle.java	(revision 2e520b49d25b2d2bccd8a67f179c7947b089c2ce)
++++ oksana/src/main/hw_oop/hw4/pdf_task1/Vehicle.java	(revision )
+@@ -8,7 +8,6 @@
+     class Wheel{
+         Vehicle.Wheel print = new Wheel();
+ 
+-
+     }
+     class Door{
+         Vehicle.Door print = new Door();
+Index: dmitriy/src/main/hw_oop/ListTask/Teachers.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- dmitriy/src/main/hw_oop/ListTask/Teachers.java	(revision )
++++ dmitriy/src/main/hw_oop/ListTask/Teachers.java	(revision )
+@@ -0,0 +1,27 @@
++package ListTask;
++
++import java.util.ArrayList;
++
++/**
++ * Задание
++ * Используя Intelij IDEA создать проект, пакет.
++ * Создать class Main, в нем создать список, добавить учителей, которых вы только сможете вспомнить со
++ * школы. И получить индекс самого лучшего учителя и самого неочень. Вывести список в консоль.
++ */
++public class Teachers {
++     public static void main(String[] args) {
++         ArrayList<String> arr = new ArrayList<>();
++
++         arr.add("Марія Юрієвна");
++         arr.add("Андрій Степанович");
++         arr.add("Мерлін Менсон");
++         arr.add("Дядя Ваня");
++         arr.add("Супер Мен");
++         arr.add("Євгеній Петрасян");
++         arr.add("Чебурек Пекпек");
++         arr.add("Персік Олегивіч");
++
++         System.out.println("The beast teacher - " + arr.indexOf("Марія Юрієвна"));
++         System.out.println("The worst teacher - " + arr.indexOf("Дядя Ваня"));
++     }
++}
+Index: dmitriy/src/main/hw_oop/Vehicle2/Vehicle2.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- dmitriy/src/main/hw_oop/Vehicle2/Vehicle2.java	(revision )
++++ dmitriy/src/main/hw_oop/Vehicle2/Vehicle2.java	(revision )
+@@ -0,0 +1,32 @@
++package Vehicle2;
++ /**
++ * Задание 2
++ * Создайте проект, используя IntelliJ IDEA.
++ * Требуется:
++ * Создать класс Vehicle с методом print. В классе Vehicle, создайте внутренний класс Wheel и Door,
++ * которые также должны содержать метод print. Создайте екземпляры классов Wheel и Door.
++ */
++public class Vehicle2 {
++     public static void main(String[] args) {
++
++         System.out.println("Vehicle2:");
++
++     class Weel{
++         public String print(){
++             return "Weel";
++         }
++     }
++
++         class Door{
++         public String print(){
++             return "Door";
++         }
++     }
++
++     Weel weel = new Weel();
++     Door door = new Door();
++
++         System.out.println(weel.print());
++         System.out.println(door.print());
++     }
++}
+Index: dmitriy/src/main/hw_oop/Worker/Test.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- dmitriy/src/main/hw_oop/Worker/Test.java	(revision )
++++ dmitriy/src/main/hw_oop/Worker/Test.java	(revision )
+@@ -0,0 +1,45 @@
++package Worker;
++
++import java.lang.reflect.Array;
++import java.util.ArrayList;
++import java.util.Scanner;
++
++/**
++ * Задание 2
++ * Создайте проект, используя IntelliJ IDEA.
++ * Требуется:
++ * Описать класс с именем Worker, содержащую следующие поля:
++ * фамилия и инициалы работника;
++ * название занимаемой должности;
++ * год поступления на работу.
++ * Написать программу, выполняющую следующие действия:
++ * ввод с клавиатуры данных в массив, состоящий из пяти элементов типа Worker (записи должны
++ * быть упорядочены по алфавиту);
++ * если значение года введено не в соответствующем формате выдает исключение.
++ * вывод на экран фамилии работника, стаж работы которого превышает введенное значение.
++ */
++public class Test {
++    public static void main(String[] args) {
++
++        Scanner scanner = new Scanner(System.in);
++        Worker arr[] = new Worker[5];
++
++        for (int i = 0; i < 5; i++){
++
++            System.out.println("Worker #" + i + ":");
++            Worker worker = new Worker();
++
++            System.out.print("Enter worker initialization - ");
++            worker.setInitialization(scanner.nextLine());
++
++            System.out.print("Enter worker position - ");
++            worker.setPosition(scanner.nextLine());
++
++            System.out.print("Enter worker start year - ");
++            worker.setYerToStart(scanner.nextInt());
++
++            arr[i] = worker;
++        }
++        System.out.println(arr.length);
++    }
++}
+Index: dmitriy/src/main/hw_oop/Animals/Test.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- dmitriy/src/main/hw_oop/Animals/Test.java	(revision )
++++ dmitriy/src/main/hw_oop/Animals/Test.java	(revision )
+@@ -0,0 +1,10 @@
++package Animals;
++
++/**
++ * Created by Администратор on 24.11.2015.
++ */
++public class Test {
++    public static void main(String[] args) {
++   //     Animals animals = new Animals(25);
++    }
++}
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/compiler.xml	(revision 2e520b49d25b2d2bccd8a67f179c7947b089c2ce)
++++ .idea/compiler.xml	(revision )
+@@ -32,13 +32,13 @@
+       </profile>
+     </annotationProcessing>
+     <bytecodeTargetLevel target="1.8">
+-      <module name="dima" target="1.5" />
+-      <module name="dmitriy" target="1.5" />
+-      <module name="examples" target="1.5" />
+-      <module name="java_starter" target="1.5" />
+-      <module name="oksana" target="1.5" />
++      <module name="dima" target="1.8" />
++      <module name="dmitriy" target="1.8" />
++      <module name="examples" target="1.8" />
++      <module name="java_starter" target="1.8" />
++      <module name="oksana" target="1.8" />
+       <module name="pavel" target="1.8" />
+-      <module name="sergey" target="1.5" />
++      <module name="sergey" target="1.8" />
+     </bytecodeTargetLevel>
+   </component>
+ </project>
+\ No newline at end of file
+Index: dmitriy/src/main/hw_oop/Calculator/Test.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- dmitriy/src/main/hw_oop/Calculator/Test.java	(revision )
++++ dmitriy/src/main/hw_oop/Calculator/Test.java	(revision )
+@@ -0,0 +1,46 @@
++package Calculator;
++
++import java.util.Scanner;
++
++/**
++ * Задание
++ * Создайте проект, используя IntelliJ IDEA.
++ * Создайте класс Calculator.
++ * В теле класса создайте четыре метода для арифметических действий: (Add – сложение, Sub – вычитание,
++ * Mul – умножение, Div – деление).
++ * Метод деления должен делать проверку деления на ноль, если проверка не проходит, сгенерировать
++ * исключение.
++ * Пользователь вводит значения, над которыми хочет произвести операцию и выбрать саму операцию.
++ * При возникновении ошибок должны выбрасываться исключения.
++ */
++public class Test {
++    public static void main(String[] args) {
++
++        Scanner scanner = new Scanner(System.in);
++        System.out.println("Enter your number end action (the gap between the values)");
++
++        Calculator calculator = new Calculator();
++
++        calculator.setA(scanner.nextDouble());
++        calculator.setAction(scanner.next());
++        calculator.setB(scanner.nextDouble());
++
++        switch (calculator.getAction()){
++            case "+":
++                System.out.println(calculator.add(calculator.getA(), calculator.getB()));
++                break;
++            case "-":
++                System.out.println(calculator.sub(calculator.getA(), calculator.getB()));
++                break;
++            case "*":
++                System.out.println(calculator.mul(calculator.getA(), calculator.getB()));
++                break;
++            case "/":
++                System.out.println(calculator.div(calculator.getA(), calculator.getB()));
++                break;
++            default:
++                System.out.println("Fuck!");
++
++        }
++    }
++}
+Index: dmitriy/src/main/hw_oop/Animals/Animals.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- dmitriy/src/main/hw_oop/Animals/Animals.java	(revision )
++++ dmitriy/src/main/hw_oop/Animals/Animals.java	(revision )
+@@ -0,0 +1,17 @@
++package Animals;
++/**
++ * Задание 2
++ * Создайте проект, используя IntelliJ IDEA.
++ * Создайте перечислительный тип (enum) Animals, содержащий коструктор, который должен принимать
++ * целочисленное значение (возраст животного), и содержать перегруженый метод toString(), который
++ * должен возвращать название экземпляра и возраст животного.
++ */
++public enum Animals {;
++
++    private int old;
++
++    Animals(int old) {
++        this.old = old;
++    }
++
++}
+Index: dmitriy/src/main/hw_oop/Worker/Worker.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- dmitriy/src/main/hw_oop/Worker/Worker.java	(revision )
++++ dmitriy/src/main/hw_oop/Worker/Worker.java	(revision )
+@@ -0,0 +1,50 @@
++package Worker;
++/**
++ * Задание 2
++ * Создайте проект, используя IntelliJ IDEA.
++ * Требуется:
++ * Описать класс с именем Worker, содержащую следующие поля:
++ * фамилия и инициалы работника;
++ * название занимаемой должности;
++ * год поступления на работу.
++ * Написать программу, выполняющую следующие действия:
++ * ввод с клавиатуры данных в массив, состоящий из пяти элементов типа Worker (записи должны
++ * быть упорядочены по алфавиту);
++ * если значение года введено не в соответствующем формате выдает исключение.
++ * вывод на экран фамилии работника, стаж работы которого превышает введенное значение.
++ */
++public class Worker {
++
++    private String initialization;
++    private String position;
++    private int yerToStart;
++
++    public void setInitialization(String initialization){
++        this.initialization = initialization;
++    }
++    public String getInitialization(){
++        return initialization;
++    }
++    public void setPosition(String position){
++        this.position = position;
++    }
++    public String getPosition(){
++        return position;
++    }
++    public void setYerToStart(int yerToStart){
++        this.yerToStart = yerToStart;
++    }
++    public int getYerToStart(){
++        return yerToStart;
++    }
++
++//    Worker(String initialization, String position, int yerToStart){
++//        this.initialization = initialization;
++//        this.position = position;
++//        this.yerToStart = yerToStart;
++//    }
++
++    public void toPrint(){
++
++    }
++}
+Index: dmitriy/src/main/hw/queGen/Questions.txt
+===================================================================
+--- dmitriy/src/main/hw/queGen/Questions.txt	(revision 2e520b49d25b2d2bccd8a67f179c7947b089c2ce)
++++ dmitriy/src/main/hw/queGen/Questions.txt	(revision 2e520b49d25b2d2bccd8a67f179c7947b089c2ce)
+@@ -1,196 +0,0 @@
+-1. Что такое JDK? Для чего он нужен?
+-2. Что входит в состав JDK?
+-3. Что такое JRE?
+-4. Для чего нужна JRE?
+-5. Какой компании принадлежали права на Java и какой принадлежат на данный момент?
+-6. Сколько версий имеет Java на данный момент?
+-7. Что такое JVM? Для чего она нужна?
+-8. Какое из утверждений верно: "JDK содержит JRE" или "JRE содержит JDK"?
+-9. Опишите все этапы от написания программы в среде разработки до ее запуска на платформе?
+-10. Что такое байт-код?
+-11. Какой язык программирования "быстрее" - С++ или Java? Почему?
+-12. Что такое высокоуровневый и низкоуровневый языки программирования? К какому из них относится Java?
+-13. Что означают следующие абревиатуры: Java ME, Java SE, Java EE?
+-14. Что такое компилятор? Для чего он нужен?
+-15. Какое расширение имеет написанная и скомпилированная программа на Java?
+-16. Что означают консольные команды java и javac?
+-17. Назовите проекты, реализованые с привлечением Java (J2EE) технологий?
+-18. Назовите преимущества Java, как языка программирования?
+-19. Кто является основателем, разработчиком и главным идеологом архитектуры Java?
+-20. Обьясните лозунг Java "Write once - run everywhere!"?
+-21. Что такое бит? Какие состояния он имеет?
+-22. Сколько команд можно представить с помощью трех бит?
+-23. Сколько комбинаций(команд) можно представить с помощью пяти бит?
+-24. Сколько бит содержит один байт?
+-25. Сколько байт содержит один Мегабайт?
+-26. Какие единицы измерения количества информации вы знаете?
+-27. Каким образом процессор взаимодействует с оперативной памятью?
+-28. Что такое "машинное слово"?
+-29. Как вы понимаете термин "система исчисления"?
+-30. Как вы понимаете термин "основание системы исчисления"?
+-31. Какой префикс используется для записи числа в 16-ой системе исчисления?
+-32. Какой префикс используется для записи числа в 8-ой системе исчисления?
+-33. Переведите число 17 из 10-ой в 2-ую систему исчисления.
+-34. Переведите число 27 из 10-ой в 8-ую систему исчисления.
+-35. Переведите число 57 из 10-ой в 16-ую систему исчисления.
+-36. Переведите число 10110 из 2-ой в 10-ую систему исчисления.
+-37. Переведите число 25 из 8-ой в 10-ую систему исчисления.
+-38. Переведите число 2А из 16-ой в 10-ую систему исчисления.
+-39. Что такое переменная?
+-40. Что необходимо указать при создании переменной?
+-41. Что означает инциализация переменной?
+-42. Какие типы данных существуют в Java?
+-43. Каково количество примитивных типов в Java?
+-44. Нарисуйте класификацию примитивных типов Java?
+-45. Какие значения может принимать тип boolean?
+-46. Может ли тип char принимать отрицательные значения?
+-47. Назовите способы инциализации переменной char?
+-48. Какое количество памяти занимает переменная примитивного типа byte?
+-49. Какое количество памяти занимает переменная примитивного типа short?
+-50. Какое количество памяти занимает переменная примитивного типа int?
+-51. Какое количество памяти занимает переменная примитивного типа long?
+-52. Какое количество памяти занимает переменная примитивного типа float?
+-53. Какое количество памяти занимает переменная примитивного типа double?
+-54. Какое количество памяти занимает переменная примитивного типа char?
+-55. Какой диапазон величин может принимать переменная примитивного типа byte?
+-56. Какой диапазон величин может принимать переменная примитивного типа short?
+-57. Какой диапазон величин может принимать переменная примитивного типа int?
+-58. Какой диапазон величин может принимать переменная примитивного типа char?
+-55. Какие примитивные типы называют "типами с плавающей запятой"?
+-56. Что такое безопасное и небезопасное приведение примитивных типов?
+-57. Что такое Code Conventions?
+-58. Какие символы недопустимы в первом символе названия переменной и какие в последующих символах? Какие допустимы?
+-59. Допустимо ли использование цифр, как первых символов, при именовании переменных?
+-60. Чувствителен ли Java язык к регистру при наименовании переменных?
+-61. Что вы знаете о Camel casing?
+-62. С какого регистра стоит называть переменные в Java? Пакеты? Метолы? Названия классов? Константы?
+-63. Что понимают под ключевыми словами в Java? Можно ли их использовать в качестве названий переменных?
+-64. Что такое GIT? Зачем он нужен? Какие возможности он предоставляет разработчику?
+-65. Что такое commit? Что такое репозиторий?
+-66. Какие системы контроля версий вы знаете?
+-67. Чем отличаеться метод System.out.print() от System.out.println()? Можно ли вызвать System.out.print() без параметров?
+-68. Что такое public static void main(String[] args)? Что означает каждое из слов этого метода?
+-69. Что такое "классы ообертки"? Почему они так называются, какую функцию выполняют?
+-70. Что означает ключевое слово final в Java? К чему оно применимо?
+-71. Что такое константа? Какой модификатор(ключевое слово) используется для определения констант в Java? В каком регистре именуют константы?
+-72. Приведите примеры констант из стандартных библиотек Java?
+-//03
+-73. Что такое переменная?
+-74. Где и для чего используются переменные?
+-75. Назовите основные типы данных.
+-76. Какие типы данных подходят для хранения значений чисел с плавающей запятой?
+-77. В каком формате должны задаваться значения для строковых переменных?
+-78. Что такое константа?
+-79. В каких случаях используются константы?
+-80. Что такое преобразование значений типов (Casting)?
+-81. Какие существуют правила использования преобразования значений при работе с константами?
+-82. В чем разница явного и неявного преобразования значения типа?
+-83. Что такое конкатенация?
+-84. Что такое переполнение и как его контролировать в программах?
+-85. Что такое инкремент и декремент?
+-86. Какие ограничения применяются к неинициализированным локальным переменным?
+-87. Можно ли использовать в операциях сравнения, два значения разных типов данных?
+-88. Что такое неявно типизированная локальная переменная?
+-//04
+-89. Обязательно ли оператор if должен использоваться вместе с оператором else?
+-90. Обязательно ли создавать блок default в переключателе switch?
+-91. Допустимо ли вложение тернарных операторов?
+-92. Значения какого типа можно передавать в качестве параметра if()?
+-93. Обязательно ли в переключателе switch-case использовать оператор перехода break?
+-94. Может ли switch-case иметь только блок default?
+-95. Что такое техника проваливания в операторе switch-case?
+-//05
+-96. Назовите основные логические функции.
+-97. Расскажите таблицу истинности конъюнкции.
+-98. Расскажите таблицу истинности дизъюнкции.
+-99. Расскажите таблицу истинности исключающего ИЛИ.
+-100. Где и для чего используются логические операции?
+-101. Где и для чего используются побитовые логические операции?
+-102. Где и для чего используются сдвиги?
+-103. Что такое короткозамкнутые вычисления?
+-104. Какие вы знаете короткозамкнутые вычисления?
+-105. Дайте определение теорем Де Моргана.
+-//06
+-106. Что такое цикл?
+-107. Перечислите известные Вам циклические конструкции.
+-108. Где и для чего используются циклические конструкции?
+-109. Значения, какого типа можно передавать в качестве параметра while()?
+-110. Что такое итерация?
+-111. В чем разница между циклом while и do-while?
+-112. Для чего используются служебные слова continue и break?
+-113. Что такое цикл Дейкстры?
+-114. В чем отличие цикла «Паук» от цикла Дейкстры?
+-115. Какой цикл предпочтительней использовать для расчета факториала?
+-116. Назовите конструкцию пропуска итерации.
+-117. Что такое цикл с выходом из середины и как его организовать?
+-//7
+-118. Что такое метод?
+-119. Чем отличаются функции и процедуры?
+-120. Что делает оператор return?
+-121. Что такое сигнатура метода?
+-122. Что такое семантика метода?
+-123. Что такое метод предикат?
+-124. Какие правила именования применимы к методам?
+-//8
+-125. Что такое метод?
+-126. Чем отличаются функции и процедуры?
+-127. Что такое перегрузка метода?
+-128. Что такое рекурсия и какие виды рекурсии вы знаете?
+-129. Что такое опциональные параметры?
+-130. Что такое метод предикат?
+-131. Какие правила именования применимы к методам?
+-132. Можно ли выполнить перегрузку метода main?
+-//9
+-131. Что такое одномерный массив?
+-132. Что такое двумерный массив?
+-133. Что такое трехмерный массив?
+-134. Что такое зубчатый массив?
+-135. Может ли индекс превышать общее количество элементов массива?
+-136. С какого числа начинают индексироваться элементы массива?
+-//oop
+-137. Что такое Класс?
+-138. Что такое объект?
+-139. Что такое экземпляр класса?
+-140. Что такое ООП?
+-141. Назовите основные парадигмы OOP.
+-142. Что такое инкапсуляция?
+-143. Какие модификаторы доступа вы знаете? Для чего они используются?
+-144. Как работает память JVM.
+-145. Что такое пакеты, зачем они нужны?
+-146. Что такое статический импорт?
+-//
+-147. Что такое Конструктор?
+-148. Что такое Конструктор по умолчанию, Приватный?
+-149. Что значит this?
+-150. Что такое перегрузка конструкторов?
+-151. Как создавать конструктор из конструктора.
+-152. Как применяется статика с полями?
+-153. Как используется статика в методах?
+-154. Перечислить где может статика использоваться.
+-//
+-155. Что такое наследование?
+-156. Какие недостатки наследования вы знаете?
+-157. Что такое модификаторы доступа и где их используют?
+-158. Что такое ООП?
+-159. Назовите основные парадигмы OOP.
+-160. Что такое полиморфизм?
+-161. Зачем используется ключевое слово virtual?
+-162. Что такое Cast, Upcast, Downcast?
+-163. Объясните назначение ключевого слова final?
+-//
+-164. Что такое абстрактный класс?
+-165. Что такое интерфейс?
+-166. Чем абстрактный класс отличается от интерфейса?
+-167. Что такое множественное наследование?
+-168. Чем абстрактный класс отличается от конкретного?
+-169. Какие члены могут быть абстрактными?
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+Index: dmitriy/src/main/hw_oop/Vehicle3/Vehicles.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- dmitriy/src/main/hw_oop/Vehicle3/Vehicles.java	(revision )
++++ dmitriy/src/main/hw_oop/Vehicle3/Vehicles.java	(revision )
+@@ -0,0 +1,14 @@
++package Vehicle3;
++ /**
++ * Задание
++ * Создайте проект, используя IntelliJ IDEA.
++ * Создайте перечислительный тип (enum) Vehicles, содержащий коструктор, который должен принимать
++ * целочисленное значение (стоимость автомобиля), содержать метод getColor(), который возвращает
++ * строку с цветом автомобиля, и содержать перегруженый метод toString(), который должен возвращать
++ * строку с названием экземпляра, цветом и стоимостью автомобиля.
++ */
++public enum Vehicles{}
++
++
++
++
+Index: dmitriy/src/main/hw_oop/Test.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- dmitriy/src/main/hw_oop/Test.java	(revision 2e520b49d25b2d2bccd8a67f179c7947b089c2ce)
++++ dmitriy/src/main/hw_oop/Test.java	(revision )
+@@ -1,5 +1,3 @@
+-
+-
+ /**1. Создать класс Schoolboy, который содержит три поля:
+  - имя
+  - фамилия
+@@ -9,7 +7,6 @@
+  4. Создать массив типа Schoolboy и поместить туда созданные обьекты.
+  5. Используя данный массив как входящий параметр написать матоды для решения следующих задач:
+  */
+-
+ public class Test {
+     public static void main(String[] args) {
+ 
+@@ -52,11 +49,9 @@
+          9. Заменить все парные оценки в массиве обьектов на 0.
+          10. Подсчитать и вывести в консоль одинаковые оценки в массиве обьектов.
+          */
++
+-//----------------------------------------------------------------------------------------------------------------------
++        //----------------------------------------------------------------------------------------------------------------------
+ 
+-
+-
+-
+         System.out.println("Show the status of all object - ");// task #1
+         System.out.println();
+ 
+@@ -64,11 +59,11 @@
+             //        System.out.println(studentArr[i]);
+             System.out.println(studentArr[i].name + " " + studentArr[i].surname + " got  - " + studentArr[i].assessment);
+         }
++
+         System.out.println();
+ 
+-
+-
+-            //-------------------------------------------------------------------2. Вывести в консоль все парные оценки обьектов массива.
++        //-------------------------------------------------------------------2. Вывести в консоль все парные оценки обьектов массива.
++
+         System.out.println();
+         System.out.print("All even assessment - ");
+ 
+@@ -77,6 +72,7 @@
+                     System.out.print(studentArr[j].assessment + " ");
+                 }
+             }
++
+         //3. Вывести все оценки обьектов массива в обратном порядке.
+ 
+         System.out.println();
+@@ -85,17 +81,17 @@
+         for (int i = studentArr.length - 1; i >= 0  ; i--) {
+             System.out.print(studentArr[i].assessment + " ");
+         }
++
+         //----------------------------4. Вывести первую и вторую половину оценок массива обьектов.
+ 
+-
+         System.out.println();
+         System.out.print("First half of assessment - ");
+ 
+         for (int i = 0; i < studentArr.length / 2; i++) {
+             System.out.print(studentArr[i].assessment + " ");
+         }
+-        System.out.println();
+ 
++        System.out.println();
+         System.out.print("Second half of assessment - ");
+ 
+         for (int i = studentArr.length / 2; i < studentArr.length ; i++) {
+@@ -103,61 +99,68 @@
+         }
+ 
+         //-------------------------5. Вывести первую и вторую половину оценок массива обьектов в обратном порядке.
+-        System.out.println();
+ 
++        System.out.println();
+         System.out.print("First half of assessment - in reverse order - ");
+ 
+         for (int i = studentArr.length / 2 - 1; i >= 0; i--) {
+             System.out.print(studentArr[i].assessment + " ");
+         }
+-        System.out.println();
+ 
++        System.out.println();
+         System.out.print("Second half of assessment - in reverse order - ");
+ 
+         for (int i = studentArr.length - 1; i >= studentArr.length / 2 ; i--) {
+             System.out.print(studentArr[i].assessment + " ");
+         }
++
+         System.out.println();
+ 
+         //---------------------------------6. Найти и вывести сумму всех оценок обьектов массива.
++
+         int sum = 0;
+         for (int i = 0; i < studentArr.length; i++) {
+              sum += studentArr[i].assessment;
+         }
++
+         System.out.print("The sum of all assessment - " + sum);
+         System.out.println();
+ 
+         //--------------------------------7. Найти среднеарифметическое всех оценок обьектов массива
+ 
+         int average = sum / studentArr.length;
++
+         System.out.print("Arithmetic average of all assessment - " + average);
+         System.out.println();
+ 
+-//-----------------------------------8. Найти минимальную и максимальную оценку в массиве обьектов.
++        //-----------------------------------8. Найти минимальную и максимальную оценку в массиве обьектов.
+ 
+         System.out.print("Max. assessment of mas - ");
++
+         int max = 0;
+         for (int i = 0; i < studentArr.length ; i++) {
+             if (max < studentArr[i].assessment){
+                 max = studentArr[i].assessment;
+             }
+         }
++
+         System.out.println(max);
+         System.out.println();
++
+         //------------------------9. Заменить все парные оценки в массиве обьектов на 0.
+ 
+-
+         System.out.print("Change the paired assessment to zero - ");
+ 
+         for (int i = 0; i < studentArr.length; i++) {
+             if (studentArr[i].assessment % 2 == 0)studentArr[i].assessment = 0;
+         }
++
+         for (int i = 0; i < studentArr.length; i++) {
+             System.out.print(studentArr[i].assessment + " ");
+         }
++
+         System.out.println();
+ 
+-
+         //----------------10. Подсчитать и вывести в консоль одинаковые оценки в массиве обьектов.
+ 
+         System.out.println();
+@@ -178,13 +181,10 @@
+             //        System.out.println(studentArr[i]);
+             System.out.println(studentArr[i].name + " " + studentArr[i].surname + " got  - " + studentArr[i].assessment);
+         }
+-        System.out.println();
+ 
+-
+-
+-
+-
++        System.out.println();
+         System.out.print("The same amount of elements in the array - ");
++
+         int counter = 0;
+ 
+        for (int i = 0; i < studentArr.length; i++) {
+@@ -195,6 +195,7 @@
+                 }
+             }
+         }
++
+         System.out.println(counter);
+         System.out.println();
+ 
+@@ -208,6 +209,7 @@
+          18. Вывести в консоль половину массива в которой находиться наименьшая оценка обьекта.
+          19. Написать метод, который перемещает в конец массива все элементы, значения которых находится в отрезке [3,8].
+          */
++
+         //----------11. Поменять минимальную и максимальную оценки в массиве обьектов местами.
+ 
+     }
+Index: dmitriy/src/main/hw_oop/ListTask/Task4Listerator.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- dmitriy/src/main/hw_oop/ListTask/Task4Listerator.java	(revision )
++++ dmitriy/src/main/hw_oop/ListTask/Task4Listerator.java	(revision )
+@@ -0,0 +1,29 @@
++package ListTask;
++
++import java.util.ArrayList;
++import java.util.Iterator;
++
++/**
++ * Задание 4
++ * Используя Intelij IDEA создать проект, пакет.
++ * Создать класс Main, создать список целых чисел и используя listIterator пройтись по списку и увеличить
++ * значения на 1;
++ */
++public class Task4Listerator {
++    public static void main(String[] args) {
++        ArrayList arr = new ArrayList(5);
++
++        arr.add(0, 2);
++        arr.add(1, 10);
++        arr.add(2, 4);
++        arr.add(3, 5);
++        arr.add(4, 18);
++
++        Iterator<Integer> iterator = arr.iterator();
++
++        while (iterator.hasNext()) {
++            Integer integer = iterator.next();
++            System.out.println(integer + 1);
++        }
++    }
++}
+Index: dmitriy/src/main/hw_oop/Distance/Distance.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- dmitriy/src/main/hw_oop/Distance/Distance.java	(revision )
++++ dmitriy/src/main/hw_oop/Distance/Distance.java	(revision )
+@@ -0,0 +1,63 @@
++package Distance;
++/**
++ * Задание 3
++ * Создайте проект, используя IntelliJ IDEA.
++ * Требуется:
++ * Создать класс Distance с полем distance типа double и методом print. В классе Distance, создайте
++ * статический класс Converter с методами, которые будут конвертировать расстояние в разные единицы
++ * измерения (к примеру из матров в километры, из километров в мили, и так далее).
++ */
++public class Distance {
++
++    private static double distance;
++
++    public void setDistance(double number){distance = number;}
++    public double getDistance(){return distance;}
++
++    public static void print(double dis) {
++        System.out.println(dis);
++    }
++
++    static class Convert {
++        double mmToCm(double distance) {
++            return distance / 10;
++        }
++
++        double cmTomm(double distance) {
++            return distance * 10;
++        }
++
++        double cmTom(double distance) {
++            return distance / 100;
++        }
++
++        double mToCm(double distance) {
++            return distance * 100;
++        }
++
++        double cmToDm(double distance) {
++            return distance * 0.39370078740157;
++        }
++
++        double dmToCm(double distance) {
++            return distance / 0.39370078740157;
++        }
++
++        double metrToKilometr(double distance) {
++            return distance * 1000;
++        }
++
++        double KilometrToMetr(double distance) {
++            return distance / 1000;
++        }
++
++        double KilometrToMili(double distance) {
++            return distance / 0.62137119223733;
++        }
++
++        double MiliToKilometr(double distance) {
++            return distance * 0.62137119223733;
++        }
++    }
++}
++
+Index: dmitriy/src/main/hw_oop/Distance/Test.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- dmitriy/src/main/hw_oop/Distance/Test.java	(revision )
++++ dmitriy/src/main/hw_oop/Distance/Test.java	(revision )
+@@ -0,0 +1,65 @@
++package Distance;
++
++import java.util.Scanner;
++
++/**
++ * Задание 3
++ * Создайте проект, используя IntelliJ IDEA.
++ * Требуется:
++ * Создать класс Distance с полем distance типа double и методом print. В классе Distance, создайте
++ * статический класс Converter с методами, которые будут конвертировать расстояние в разные единицы
++ * измерения (к примеру из матров в километры, из километров в мили, и так далее).
++ */
++public class Test {
++    public static void main(String[] args) {
++
++        Distance dis = new Distance();
++        Distance.Convert convert = new Distance.Convert();
++
++        Scanner sc = new Scanner(System.in);
++
++        System.out.print("Enter the number - ");
++
++        dis.setDistance(sc.nextDouble());
++
++        System.out.println("Select translation:");
++        System.out.println("1 - Milimetr to Santimetr");
++        System.out.println("2 - Santimetr to Milimetr");
++        System.out.println("3 - Santimetr to Metr");
++        System.out.println("4 - Metr to Santimetr");
++        System.out.println("5 - Santimetr to DcMetr");
++        System.out.println("6 - DcMetr to Santimetr");
++        System.out.println("7 - Metr to Kilometr");
++        System.out.println("8 - Kilometr to Metr");
++        System.out.println("9 - Kilometr to Mili");
++        System.out.println("10 - Mili to Kilometr");
++
++        int numb = sc.nextInt();
++
++        switch (numb){
++            case 1: dis.print(convert.mmToCm(dis.getDistance()));
++                break;
++            case 2: dis.print(convert.cmTomm(dis.getDistance()));
++                break;
++            case 3: dis.print(convert.cmTom(dis.getDistance()));
++                break;
++            case 4: dis.print(convert.mmToCm(dis.getDistance()));
++                break;
++            case 5: dis.print(convert.cmToDm(dis.getDistance()));
++                break;
++            case 6: dis.print(convert.dmToCm(dis.getDistance()));
++                break;
++            case 7: dis.print(convert.metrToKilometr(dis.getDistance()));
++                break;
++            case 8: dis.print(convert.KilometrToMetr(dis.getDistance()));
++                break;
++            case 9: dis.print(convert.KilometrToMili(dis.getDistance()));
++                break;
++            case 10: dis.print(convert.MiliToKilometr(dis.getDistance()));
++                break;
++            default:
++                System.out.println("Erore!");
++                break;
++        }
++    }
++}
+Index: dmitriy/src/main/hw_oop/MyArea/MyArea.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- dmitriy/src/main/hw_oop/MyArea/MyArea.java	(revision 2e520b49d25b2d2bccd8a67f179c7947b089c2ce)
++++ dmitriy/src/main/hw_oop/MyArea/MyArea.java	(revision )
+@@ -3,11 +3,11 @@
+ import com.sun.corba.se.impl.interceptors.PICurrent;
+ 
+ /*Задание
+-        Используя Intelij IDEA создать проект, пакет.
+-        Создать класс MyArea, в нем объявить константу PI = 3.14 и статический метод areaOfCircle, который
+-        должен принимать радиус и используя PI посчитать площадь круга.
+-        Создать класс Main, где запустить данный метод.
++ * Используя Intelij IDEA создать проект, пакет.
++ * Создать класс MyArea, в нем объявить константу PI = 3.14 и статический метод areaOfCircle, который
++ * должен принимать радиус и используя PI посчитать площадь круга.
++ * Создать класс Main, где запустить данный метод.
+-**/
++ **/
+ public class MyArea {
+ 
+     final static double PI = 3.14;
+Index: dmitriy/src/main/hw_oop/javaTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- dmitriy/src/main/hw_oop/javaTest.java	(revision )
++++ dmitriy/src/main/hw_oop/javaTest.java	(revision )
+@@ -0,0 +1,7 @@
++/**
++ * Created by Администратор on 24.11.2015.
++ */
++public class javaTest {
++    public static void main(String[] args) {
++    }
++}
+Index: java_starter.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- java_starter.iml	(revision 2e520b49d25b2d2bccd8a67f179c7947b089c2ce)
++++ java_starter.iml	(revision )
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_5" inherit-compiler-output="false">
++  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="false">
+     <output url="file://$MODULE_DIR$/target/classes" />
+     <output-test url="file://$MODULE_DIR$/target/test-classes" />
+     <content url="file://$MODULE_DIR$">
+\ No newline at end of file
