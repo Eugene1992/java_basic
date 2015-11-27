@@ -15,6 +15,7 @@
         <module>pavel</module>
         <module>examples</module>
         <module>dima</module>
+        <module>alexey</module>
     </modules>
 
     <dependencies>

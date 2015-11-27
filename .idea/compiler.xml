@@ -22,6 +22,7 @@
         <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="alexey" />
         <module name="dima" />
         <module name="dmitriy" />
         <module name="examples" />
