@@ -1,5 +1,7 @@
 package clasWork;
 
+import clasWork.generics.ISimpleInterfece;
+
 /**
  * Created by ppota on 11/9/2015.
  */

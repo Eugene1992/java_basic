@@ -1,4 +1,4 @@
-package clasWork;
+package clasWork.generics;
 
 import java.util.Objects;
 

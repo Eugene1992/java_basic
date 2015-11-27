@@ -1,8 +1,5 @@
 package hw1;
 
-/**
- * Created by ppota on 10/8/2015.
- */
 
 //Задание 2
 //        Используя IntelliJ IDEA, создайте класс arithmeticAverage .
