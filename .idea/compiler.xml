@@ -22,28 +22,21 @@
         <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="alexey" />
         <module name="dima" />
         <module name="dmitriy" />
         <module name="examples" />
         <module name="fsf" />
         <module name="oksana" />
+        <module name="pavel" />
         <module name="sergey" />
-      </profile>
-      <profile default="false" name="Annotation profile for pavel" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
-      <module name="alexey" target="1.5" />
-      <module name="dima" target="1.5" />
-      <module name="dmitriy" target="1.5" />
-      <module name="examples" target="1.5" />
-      <module name="java_starter" target="1.5" />
-      <module name="oksana" target="1.5" />
+      <module name="dima" target="1.8" />
+      <module name="dmitriy" target="1.8" />
+      <module name="examples" target="1.8" />
+      <module name="java_starter" target="1.8" />
+      <module name="oksana" target="1.8" />
       <module name="pavel" target="1.8" />
       <module name="sergey" target="1.5" />
     </bytecodeTargetLevel>
