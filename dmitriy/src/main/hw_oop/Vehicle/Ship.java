@@ -10,6 +10,7 @@ public class Ship extends Vehicle{
         this.passengers = passengers;
         this.port = port;
     }
+
     public int getPassengers(){return passengers;}
     public String getPort(){return port;}
 

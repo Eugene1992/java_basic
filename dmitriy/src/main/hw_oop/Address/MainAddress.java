@@ -32,9 +32,5 @@ public class MainAddress {
         System.out.print("Apartment");
         System.out.print("\t   \t");
         System.out.println(address.getApartment());
-
-
-
-
     }
 }

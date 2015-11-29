@@ -1,5 +1,4 @@
 package Car3;
-
 /**
  Задание 4
  Используя Intelij IDEA создать проект, пакет.
@@ -9,7 +8,6 @@ package Car3;
  Создать класс Main, в котором создать экземляры класса Машина с разными параметрами.
  */
 public class Car3 {
-
 
     private int year;
     private double speed;

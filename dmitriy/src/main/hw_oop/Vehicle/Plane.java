@@ -10,6 +10,7 @@ public class Plane extends Vehicle{
         this.height = height;
         this.passengers = passengers;
     }
+
         public int getHeight(){return height;}
         public int getPassengers(){return passengers;}
 

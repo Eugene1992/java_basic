@@ -54,7 +54,6 @@ public class Test {
             public int compare(Worker o, Worker o2) {
                 if (o.getInitialization().equals(o2.getInitialization())) {
                     return o.getYerToStart() - o2.getYerToStart();
-
                 }else return o.getInitialization().compareTo(o2.getInitialization());
             }
         });

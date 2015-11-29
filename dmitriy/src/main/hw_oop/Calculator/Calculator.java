@@ -28,22 +28,22 @@ public class Calculator {
     public String getAction() {return action;}
 
     public double add(double a, double b){
-        return (double) a + b;
+        return a + b;
     }
     public double sub(double a, double b){
-        return (double) a - b;
+        return a - b;
     }
     public double mul(double a, double b){
-        return (double) a * b;
+        return a * b;
     }
     public double div(double a, double b){
         try {
-            return (double) a / b;
+            return a / b;
         }
         catch(Exception e) {
             System.out.println(e.getMessage());
             System.out.println("Division by zero!");
         }
-        return (double) a / b;
+        return a / b;
     }
 }

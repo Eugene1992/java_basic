@@ -14,7 +14,6 @@ public class Schoolboy {
     public String toString() {
         return surname + " " + name + " отримає оцінку " + assessment;
     }
-
 }
 
 
