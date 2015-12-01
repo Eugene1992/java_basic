@@ -1,5 +1,6 @@
 package hwOOP;
 
+import org.junit.Test;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -7,12 +8,13 @@ import java.io.IOException;
 
 
 public class File {
-        static void copyCharacters ()throws IOException {
+    @Test
+        public void copyCharacters ()throws IOException {
             FileReader inputStream = null;
             FileWriter outputStream = null;
             try {
-                inputStream = new FileReader("C:\test.txt");
-                outputStream = new FileWriter("C:\test.txt");
+                inputStream = new FileReader("C:\\test.txt");
+                outputStream = new FileWriter("C:\\test.txt");
 
                 int c;
                 while ((c = inputStream.read()) != -1) {
