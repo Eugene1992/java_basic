@@ -1,4 +1,4 @@
-package Collection.Hw1;
+package Collection;
 
 import java.util.*;
 

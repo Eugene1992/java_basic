@@ -1,4 +1,4 @@
-package Collection.Hw1;
+package Collection;
 
 import java.util.*;
 
@@ -11,12 +11,12 @@ public class Hw3 {
 
         Map<String, String> map = new HashMap<>();
 
-        map.put("a", "Vasiliy Mudakovich");
-        map.put("c", "Hay yomu gretc");
-        map.put("b", "Mamba");
-        map.put("e", "Cheburek pekpek");
-        map.put("d", "Demanu");
-        map.put("r", "dkfmvcd");
+        map.put("abc", "Vasiliy Mudakovich");
+        map.put("cab", "Hay yomu gretc");
+        map.put("bom", "Mamba");
+        map.put("bam", "Cheburek pekpek");
+        map.put("div", "Demanu");
+        map.put("rem", "dkfmvcd");
 
         Iterator<Map.Entry<String, String>> itr1 = map.entrySet().iterator();
         while (itr1.hasNext()) {
