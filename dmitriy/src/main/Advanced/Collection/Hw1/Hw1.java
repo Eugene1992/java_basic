@@ -26,11 +26,5 @@ public class Hw1 {
             category = sc.nextLine();
             map.put(buyer, category);
         }
-
-
-
-
-
-
     }
 }
