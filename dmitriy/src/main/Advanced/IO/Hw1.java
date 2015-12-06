@@ -85,7 +85,7 @@ public class Hw1 {
             int oneByte = in.read();
             if (map.containsKey(oneByte)) {
                 for (Map.Entry<Character, Integer> s : map.entrySet()) {
-                    if (s.equals((char) oneByte)) {
+                    if (s.getKey() == oneByte) {
                         s.setValue(s.getValue() + 1);
                     }
                 }
